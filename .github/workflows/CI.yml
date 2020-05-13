@@ -1,0 +1,18 @@
+name: CI
+
+# For testing
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: denolib/setup-deno@master
+        with:
+          deno-version: 1.0.0-rc3
+  
+      # Build all the packages
+      - name: Create packages for TSConfig JSONs
+        run: deno run --allow-read --allow-write scripts/deploy-npm-packages.ts
