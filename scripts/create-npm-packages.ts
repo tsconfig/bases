@@ -29,6 +29,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   const packageText = await Deno.readTextFile(path.join(packagePath, "package.json"))
   const packageJSON = JSON.parse(packageText)
   packageJSON.name = `@tsconfig/${name}`
+  packageJSON.description = `A base TSConfig for working with ${tsconfigJSON.display}.`
 
   // Do some string replacements in the other templated files
   const replaceTextIn = ["README.md"]
@@ -45,12 +46,13 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   let version = "1.0.0"
   try {
     const npmResponse = await fetch(`https://registry.npmjs.org/${packageJSON.name}`)
-    const npmPackage = JSON.parse(await npmResponse.json())
+    const npmPackage = await npmResponse.json()
 
-    const semverMarkers = npmPackage.version.split(".");
+    const semverMarkers = npmPackage["dist-tags"].latest.split(".");
     version = `${semverMarkers[0]}.${semverMarkers[1]}.${Number(semverMarkers[2]) + 1}`;
   } catch (error) {
     // NOOP, this is for the first deploy 
+    // console.log(error)
   }
   
   packageJSON.version = version

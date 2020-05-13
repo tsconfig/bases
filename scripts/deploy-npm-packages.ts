@@ -1,4 +1,5 @@
 import * as path from "https://deno.land/std/path/mod.ts";
+import * as bufio from "https://deno.land/std/io/bufio.ts";
 
 const decoder = new TextDecoder()
 const file = Deno.stdin;
@@ -18,8 +19,19 @@ for (const tsconfig of fileInput) {
   
   const name = path.basename(tsconfig).replace(".json", "")
   const packageDir = path.join("dist", name) 
-  console.log(packageDir)
+  console.log(`Deploying ${packageDir}`)
 
   // Deno.run({ cmd: ["pwd"], cwd: packageDir })
-  Deno.run({ cmd: ["npm", "publish"], cwd: packageDir })
+  
+  const process = Deno.run({
+    cmd: ["npm", "publish", "--access", "public"],
+    stdout: "piped",
+    cwd: packageDir
+  });
+  
+  for await (const line of bufio.readLines(process.stdout!)) {
+    console.warn(line);
+  }
+
+  console.log(`Deployed\n`)
 }

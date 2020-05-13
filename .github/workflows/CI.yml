@@ -15,4 +15,4 @@ jobs:
   
       # Build all the packages
       - name: Create packages for TSConfig JSONs
-        run: deno run --allow-read --allow-write scripts/deploy-npm-packages.ts
+        run: deno run --allow-read --allow-write --allow-net scripts/deploy-npm-packages.ts
