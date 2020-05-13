@@ -14,7 +14,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   const tsconfigText = await Deno.readTextFile(tsconfigFilePath)
   const tsconfigJSON = JSON.parse(tsconfigText)
 
-  center += `### ${tsconfigJSON.display}\n`
+  center += `### ${tsconfigJSON.display} <kbd><a href="./bases/${tsconfigEntry.name}">tsconfig.json</a></kbd>\n`
 
   center += `
 Install:
