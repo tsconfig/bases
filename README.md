@@ -20,6 +20,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node12/tsconfig.json"
 ```
+### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/react-native
+yarn add --dev @tsconfig/react-native
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/react-native/tsconfig.json"
+```
 ### Node 10 <kbd><a href="./bases/node10.json">tsconfig.json</a></kbd>
 
 Install:
