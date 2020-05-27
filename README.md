@@ -74,7 +74,7 @@ cd tsconfig-bases
 
 Then edit the tsconfig.json files in [`bases/`](./bases).
 
-Every morning there is a GitHub Action which deploys any changed bases.
+Every morning there is a GitHub Action which deploys any [changed tsconfigs to npm](https://github.com/tsconfig/bases/blob/master/.github/workflows/deploy.yml).
 
 ### Developing
 
