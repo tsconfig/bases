@@ -20,6 +20,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node12/tsconfig.json"
 ```
+### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/deno
+yarn add --dev @tsconfig/deno
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/deno/tsconfig.json"
+```
 ### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
 
 Install:
