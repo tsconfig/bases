@@ -7,7 +7,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   const name = path.basename(tsconfigEntry.name).replace(".json", "")
 
   // Make the folder
-  const packagePath = path.join("dist", name)
+  const packagePath = path.join("packages", name)
   Deno.mkdirSync(packagePath, { recursive: true })
 
   // Copy over the template files

@@ -18,7 +18,7 @@ for (const tsconfig of fileInput) {
   if (!tsconfig.includes("bases/")) continue
   
   const name = path.basename(tsconfig).replace(".json", "")
-  const packageDir = path.join("dist", name) 
+  const packageDir = path.join("packages", name) 
   console.log(`Deploying ${packageDir}`)
 
   // Deno.run({ cmd: ["pwd"], cwd: packageDir })
