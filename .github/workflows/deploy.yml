@@ -32,7 +32,7 @@ jobs:
       - run: |
          # Have commits been added in the last day?
          if [[ $(git log --pretty=format: --name-only --since="1 days ago") ]]; then
-            git log --pretty=format: --name-only --since="1 days ago" | deno run --allow-read --allow-run scripts/deploy-npm-packages.ts
+            git log --pretty=format: --name-only --since="1 days ago" | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

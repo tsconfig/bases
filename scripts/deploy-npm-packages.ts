@@ -26,7 +26,8 @@ for (const tsconfig of fileInput) {
   const process = Deno.run({
     cmd: ["npm", "publish", "--access", "public"],
     stdout: "piped",
-    cwd: packageDir
+    cwd: packageDir,
+    env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! }
   });
   
   for await (const line of bufio.readLines(process.stdout!)) {
