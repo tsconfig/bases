@@ -14,14 +14,16 @@ while (true) {
 }
 
 const fileInput = stdin.split("\n")
+const toDeploy = new Set<string>()
 for (const tsconfig of fileInput) {
   if (!tsconfig.includes("bases/")) continue
-  
+  toDeploy.add(path.basename(tsconfig))
+}
+
+for (const tsconfig of toDeploy) {
   const name = path.basename(tsconfig).replace(".json", "")
   const packageDir = path.join("packages", name) 
-  console.log(`Deploying ${packageDir}`)
-
-  // Deno.run({ cmd: ["pwd"], cwd: packageDir })
+  console.log(`## Deploying ${packageDir}\n`)
   
   const process = Deno.run({
     cmd: ["npm", "publish", "--access", "public"],
