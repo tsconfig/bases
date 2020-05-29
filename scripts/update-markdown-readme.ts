@@ -5,16 +5,21 @@ import * as path from "https://deno.land/std/path/mod.ts";
 const readme = await Deno.readTextFileSync("./README.md")
 let center = ""
 
+const paths = []
 for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
-  
-  const tsconfigFilePath = path.join("bases", tsconfigEntry.name)
-  const name = path.basename(tsconfigEntry.name).replace(".json", "")
+  paths.push(tsconfigEntry.name)
+}
+
+const sortedPaths = paths.sort((l, r) => l.localeCompare(r)) 
+for (const base of sortedPaths) {
+  const tsconfigFilePath = path.join("bases", base)
+  const name = path.basename(base).replace(".json", "")
   
   const tsconfigText = await Deno.readTextFile(tsconfigFilePath)
   const tsconfigJSON = JSON.parse(tsconfigText)
 
-  center += `### ${tsconfigJSON.display} <kbd><a href="./bases/${tsconfigEntry.name}">tsconfig.json</a></kbd>\n`
+  center += `### ${tsconfigJSON.display} <kbd><a href="./bases/${base}">tsconfig.json</a></kbd>\n`
 
   center += `
 Install:
@@ -30,7 +35,7 @@ Add to your \`tsconfig.json\`:
 "extends": "@tsconfig/${name}/tsconfig.json"
 \`\`\`
 `
-}
+};
 
 const startMarker ="<!-- AUTO -->"
 const start = readme.split(startMarker)[0]

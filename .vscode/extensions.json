@@ -1,4 +1,3 @@
 {
-  // https://github.com/denoland/vscode_deno/issues/4
-  "recommendations": ["justjavac.vscode-deno"]
+  "recommendations": ["denoland.vscode-deno"]
 }

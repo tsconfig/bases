@@ -1,6 +1,6 @@
 {
   "cSpell.words": [
     "Deno"
-  ]
-  
+  ],
+  "deno.enable": true
 }

@@ -6,20 +6,6 @@ Basically Definitely Typed for TSConfigs.
 In this repo:
 
 <!-- AUTO -->
-### Node 12 <kbd><a href="./bases/node12.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node12
-yarn add --dev @tsconfig/node12
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node12/tsconfig.json"
-```
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:
@@ -34,20 +20,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/deno/tsconfig.json"
 ```
-### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/react-native
-yarn add --dev @tsconfig/react-native
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/react-native/tsconfig.json"
-```
 ### Node 10 <kbd><a href="./bases/node10.json">tsconfig.json</a></kbd>
 
 Install:
@@ -61,6 +33,34 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/node10/tsconfig.json"
+```
+### Node 12 <kbd><a href="./bases/node12.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node12
+yarn add --dev @tsconfig/node12
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node12/tsconfig.json"
+```
+### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/react-native
+yarn add --dev @tsconfig/react-native
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/react-native/tsconfig.json"
 ```
 
 <!-- /AUTO -->
