@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  
+  "compilerOptions": {
+    /** Strict mode offers the most safety for your application */
+    "strict": true,
+    
+    /** These three options are to improve compatability with the js + babel ecosystem */
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    
+    /** Improves launch speed in favour of some accuracy in your @types **/
+    "skipLibCheck": true
+
+    /** This is an easy win when the operating system you are working on is different to the production environment */,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
+}
