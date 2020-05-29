@@ -1,4 +1,5 @@
 import * as path from "https://deno.land/std/path/mod.ts";
+import {parse} from "./vendor/node-jsonc-parser/jsonc.ts"
 
 for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
@@ -23,7 +24,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   Deno.copyFileSync(tsconfigFilePath, newPackageTSConfigPath)
   
   const tsconfigText = await Deno.readTextFile(newPackageTSConfigPath)
-  const tsconfigJSON = JSON.parse(tsconfigText)
+  const tsconfigJSON = parse(tsconfigText)
 
   // Edit the package.json
   const packageText = await Deno.readTextFile(path.join(packagePath, "package.json"))

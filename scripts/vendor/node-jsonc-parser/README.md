@@ -1,0 +1,1 @@
+A port of https://github.com/microsoft/node-jsonc-parser at [e38baa](https://github.com/microsoft/node-jsonc-parser/commit/e38baa7f22ee391e6dc0581d70750bdb746d855d) to deno using [denoify](https://github.com/garronej/denoify).

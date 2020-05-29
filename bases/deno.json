@@ -1,7 +1,7 @@
 {
+  // This comes from https://deno.land/manual/getting_started/typescript#custom-typescript-compiler-options
   "$schema": "http://json.schemastore.org/tsconfig",
   "display": "Deno",
-  "_docs": "https://deno.land/manual/getting_started/typescript#custom-typescript-compiler-options",
 
   "compilerOptions": {
     "allowJs": false,
