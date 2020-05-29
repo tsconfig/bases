@@ -1,9 +1,9 @@
 ## Centralized Recommendations for TSConfig bases
 
-Hosts base TSConfigs for particular environments supported and improved by the community. 
+Hosts TSConfigs for you to extend your apps, tuned to a particular runtime environment. Owned and improved by the community. 
 Basically Definitely Typed for TSConfigs.
 
-In this repo:
+### Available TSConfigs
 
 <!-- AUTO -->
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
