@@ -62,6 +62,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/react-native/tsconfig.json"
 ```
+### Svelte <kbd><a href="./bases/svelte.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/svelte
+yarn add --dev @tsconfig/svelte
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/svelte/tsconfig.json"
+```
 
 <!-- /AUTO -->
 
