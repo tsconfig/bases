@@ -16,3 +16,17 @@ jobs:
       # Build all the packages
       - name: Create packages for TSConfig JSONs
         run: deno run --allow-read --allow-write --allow-net scripts/deploy-npm-packages.ts
+
+      - name: Update the README
+        run: deno run --allow-read --allow-write --allow-net scripts/update-markdown-readme.ts
+      
+      - name: Fail if the README needs updating
+        run: |
+          if [[ -z $(git status -s) ]]
+          then
+            echo ""
+          else
+            echo "Please update the README"
+            exit 1
+          fi
+
