@@ -1,12 +1,12 @@
 name: Daily builds of changes to the TSConfig bases dir
 
 # For testing
-on: push
+# on: push
 
 # For production
-# on:
-#   schedule:
-#     - cron: "0 4 * * *"
+on:
+  schedule:
+    - cron: "0 4 * * *"
 
 jobs:
   deploy:
