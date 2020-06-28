@@ -1,12 +1,12 @@
 name: Daily builds of changes to the TSConfig bases dir
 
 # For testing
-# on: push
+on: push
 
 # For production
-on:
-  schedule:
-    - cron: "0 4 * * *"
+# on:
+#   schedule:
+#     - cron: "0 4 * * *"
 
 jobs:
   deploy:
@@ -35,7 +35,7 @@ jobs:
             git log --pretty=format: --name-only --since="1 days ago" bases | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
          fi
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
         name: 'Deploy built packages to NPM'
 
 
