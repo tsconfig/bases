@@ -11,11 +11,24 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     
-    /** Improves launch speed in favour of some accuracy in your @types **/
-    "skipLibCheck": true
+    /** Improves `tsc` launch speed in favour of some accuracy in your @types **/
+    "skipLibCheck": true,
+    
+    /** 
+      Avoids polluting the global scope from all available @types. This means
+      if you want to have global types (e.g. maybe for your test runner) then
+      you need to override this with something like "types": ["jest"]
+    */
+    "types": [],
 
     /** This is an easy win when the operating system you are working on is different to the production environment */,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    /** Tighter compatability with the standards */
+    "useDefineForClassFields": true,
+
+    /** Emit .d.ts files */
+    "declaration": true
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }
