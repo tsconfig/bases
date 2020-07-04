@@ -2,14 +2,6 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "display": "Svelte",
 
-  /** 
-   * This tsconfig base is built to work with the default TypeScript 
-   *  template for Svelte 
-   */
-
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
-
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "es2017",
