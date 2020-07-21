@@ -98,7 +98,7 @@ Create a set of npm packages via:
 deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 ```
 
-You can inspect them in the `dist/` folder, then they are deployed by passing in the paths to the base files via stdin: 
+You can inspect them in the `packages/` folder, then they are deployed by passing in the paths to the base files via stdin: 
 
 ```sh
 echo bases/node10.json | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
