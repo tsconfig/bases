@@ -10,6 +10,7 @@
       to enforce using `import type` instead of `import` for Types.
      */
     "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
     
     /** Requests the runtime types from the svelte modules by default */
     "types": ["svelte"]
