@@ -11,6 +11,11 @@
      */
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
+    /**
+      To have warnings/errors of the Svelte compiler at the correct position,
+      enable source maps by default.
+     */
+    "sourceMap": true,
     
     /** Requests the runtime types from the svelte modules by default */
     "types": ["svelte"]
