@@ -90,6 +90,12 @@ Then edit the tsconfig.json files in [`bases/`](./bases).
 
 Every morning there is a GitHub Action which deploys any changed bases.
 
+To generate the recommended TSConfig which is generated via `tsc --init`, run:
+
+```sh
+deno run --allow-read --allow-run --allow-env --allow-write --allow-net scripts/generate-recommend.ts
+```
+
 ### Developing
 
 Create a set of npm packages via:
