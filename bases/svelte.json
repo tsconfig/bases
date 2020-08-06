@@ -18,6 +18,11 @@
     "sourceMap": true,
     
     /** Requests the runtime types from the svelte modules by default */
-    "types": ["svelte"]
+    "types": ["svelte"],
+
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   }
 }

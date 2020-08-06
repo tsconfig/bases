@@ -6,6 +6,20 @@ Basically Definitely Typed for TSConfigs.
 ### Available TSConfigs
 
 <!-- AUTO -->
+### Recommended <kbd><a href="./bases/recommended.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/recommended
+yarn add --dev @tsconfig/recommended
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/recommended/tsconfig.json"
+```
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:
@@ -89,6 +103,12 @@ cd tsconfig-bases
 Then edit the tsconfig.json files in [`bases/`](./bases).
 
 Every morning there is a GitHub Action which deploys any changed bases.
+
+To generate the recommended TSConfig which is generated via `tsc --init`, run:
+
+```sh
+deno run --allow-read --allow-run --allow-env --allow-write --allow-net scripts/generate-recommend.ts
+```
 
 ### Developing
 

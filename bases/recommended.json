@@ -1,15 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 10",
-  
   "compilerOptions": {
-    "lib": ["es2018"],
+    "target": "ES2015",
     "module": "commonjs",
-    "target": "es2018",
-    
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }  
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended"
 }
