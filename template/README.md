@@ -17,6 +17,6 @@ Add to your `tsconfig.json`:
 
 The `tsconfig.json`: 
 
-```json
+```jsonc
 [tsconfig]
 ```
