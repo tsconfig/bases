@@ -6,6 +6,20 @@ Basically Definitely Typed for TSConfigs.
 ### Available TSConfigs
 
 <!-- AUTO -->
+### Recommended <kbd><a href="./bases/recommended.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/recommended
+yarn add --dev @tsconfig/recommended
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/recommended/tsconfig.json"
+```
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:

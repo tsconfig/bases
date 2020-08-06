@@ -12,8 +12,9 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   paths.push(tsconfigEntry.name)
 }
 
-const sortedPaths = paths.sort((l, r) => l.localeCompare(r)) 
-for (const base of sortedPaths) {
+const sortedPaths = paths.sort((l, r) => l.localeCompare(r)).filter(r => !r.includes("recommended"))
+const basePaths = ["recommended.json", ...sortedPaths]
+for (const base of basePaths) {
   const tsconfigFilePath = path.join("bases", base)
   const name = path.basename(base).replace(".json", "")
   
