@@ -1,4 +1,4 @@
-### A base TSConfig for working with [display].
+### [display_title].
 
 Add the package to your `"devDependencies"`:
 
@@ -11,4 +11,12 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/[filename]/tsconfig.json"
+```
+
+---
+
+The `tsconfig.json`: 
+
+```json
+[tsconfig]
 ```

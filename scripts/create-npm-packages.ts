@@ -37,8 +37,14 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   for (const filenameToEdit of replaceTextIn) {
     const fileToEdit =  path.join(packagePath, filenameToEdit)
   
+    const defaultTitle = `A base TSConfig for working with ${tsconfigJSON.display}`
+    const title = name !== "recommended" ? defaultTitle : "The recommended base for a TSConfig"
+
     let packageText = await Deno.readTextFile(fileToEdit)
-    packageText = packageText.replace(/\[filename\]/g, name).replace(/\[display\]/g, tsconfigJSON.display)
+    packageText = packageText.replace(/\[filename\]/g, name)
+                             .replace(/\[display\]/g, title)
+                             .replace(/\[tsconfig\]/g, Deno.readTextFileSync(tsconfigFilePath))
+
 
     await Deno.writeTextFile(fileToEdit, packageText)
   };
