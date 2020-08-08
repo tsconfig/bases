@@ -34,7 +34,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/deno/tsconfig.json"
 ```
-### undefined <kbd><a href="./bases/docusaurus.json">tsconfig.json</a></kbd>
+### Docusaurus v2 <kbd><a href="./bases/docusaurus.json">tsconfig.json</a></kbd>
 
 Install:
 
