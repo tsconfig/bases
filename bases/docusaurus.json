@@ -9,6 +9,7 @@
     "jsx": "react",
     "lib": ["DOM"],
     "noEmit": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "types": ["node", "@docusaurus/module-type-aliases"]
   }
 }
