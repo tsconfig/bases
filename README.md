@@ -34,6 +34,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/deno/tsconfig.json"
 ```
+### Docusaurus v2 <kbd><a href="./bases/docusaurus.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/docusaurus
+yarn add --dev @tsconfig/docusaurus
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/docusaurus/tsconfig.json"
+```
 ### Node 10 <kbd><a href="./bases/node10.json">tsconfig.json</a></kbd>
 
 Install:
