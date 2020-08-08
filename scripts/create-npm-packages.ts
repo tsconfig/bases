@@ -45,7 +45,6 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
                              .replace(/\[display_title\]/g, title)
                              .replace(/\[tsconfig\]/g, Deno.readTextFileSync(tsconfigFilePath))
 
-
     await Deno.writeTextFile(fileToEdit, packageText)
   };
 

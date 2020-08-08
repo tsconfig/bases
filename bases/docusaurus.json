@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Docusaurus v2",
+  "docs": "https://v2.docusaurus.io/docs/typescript-support",
+  
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["DOM"],
+    "noEmit": true,
+    "noImplicitAny": false
+  }
+}
