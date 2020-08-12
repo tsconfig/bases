@@ -16,9 +16,6 @@
       enable source maps by default.
      */
     "sourceMap": true,
-    
-    /** Requests the runtime types from the svelte modules by default */
-    "types": ["svelte"],
 
     "strict": false,
     "esModuleInterop": true,
