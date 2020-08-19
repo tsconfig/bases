@@ -1,6 +1,6 @@
 ## Centralized Recommendations for TSConfig bases
 
-Hosts TSConfigs for you to extend your in apps, tuned to a particular runtime environment. Owned and improved by the community. 
+Hosts TSConfigs for you to extend in your apps, tuned to a particular runtime environment. Owned and improved by the community. 
 Basically Definitely Typed for TSConfigs.
 
 ### Available TSConfigs
