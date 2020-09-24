@@ -3,7 +3,7 @@
   "display": "Node 14",
 
   "compilerOptions": {
-    "lib": ["es2019", "es2020"],
+    "lib": ["es2020"],
     "module": "commonjs",
     "target": "es2020",
 
