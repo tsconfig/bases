@@ -76,6 +76,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node12/tsconfig.json"
 ```
+### Node 14 <kbd><a href="./bases/node14.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node14
+yarn add --dev @tsconfig/node14
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node14/tsconfig.json"
+```
 ### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
 
 Install:
