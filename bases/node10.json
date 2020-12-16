@@ -8,6 +8,7 @@
     "target": "es2018",
     
     "strict": true,
+    "noUncheckedIndexedAccess": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
