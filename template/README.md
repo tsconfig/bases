@@ -20,3 +20,5 @@ The `tsconfig.json`:
 ```jsonc
 [tsconfig]
 ```
+
+You can find the [code here](https://github.com/tsconfig/bases/blob/master/bases/[filename].json).
