@@ -406,7 +406,7 @@ export function visit(text: string, visitor: JSONVisitor, options: ParseOptions 
 
 	const disallowComments = options && options.disallowComments;
 	const allowTrailingComma = options && options.allowTrailingComma;
-	function scanNext(): SyntaxKind {
+	function scanNext(): number {
 		while (true) {
 			const token = _scanner.scan();
 			switch (_scanner.getTokenError()) {
@@ -452,7 +452,7 @@ export function visit(text: string, visitor: JSONVisitor, options: ParseOptions 
 		}
 	}
 
-	function handleError(error: ParseErrorCode, skipUntilAfter: SyntaxKind[] = [], skipUntil: SyntaxKind[] = []): void {
+	function handleError(error: ParseErrorCode, skipUntilAfter: number[] = [], skipUntil: number[] = []): void {
 		onError(error);
 		if (skipUntilAfter.length + skipUntil.length > 0) {
 			let token = _scanner.getToken();
@@ -633,7 +633,7 @@ export function stripComments(text: string, replaceCh?: string): string {
 
 	let _scanner = createScanner(text),
 		parts: string[] = [],
-		kind: SyntaxKind,
+		kind: number,
 		offset = 0,
 		pos: number;
 

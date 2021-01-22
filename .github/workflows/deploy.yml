@@ -26,7 +26,7 @@ jobs:
 
       - uses: denolib/setup-deno@master
         with:
-          deno-version: 1.0.0-rc3
+          deno-version: v1.x
 
   
       # Build all the packages

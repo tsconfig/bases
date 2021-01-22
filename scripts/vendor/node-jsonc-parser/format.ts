@@ -51,7 +51,7 @@ export function format(documentText: string, range: Range | undefined, options: 
 	function newLineAndIndent(): string {
 		return eol + repeat(indentValue, initialIndentLevel + indentLevel);
 	}
-	function scanNext(): SyntaxKind {
+	function scanNext(): number {
 		let token = scanner.scan();
 		lineBreak = false;
 		while (token === SyntaxKind.Trivia || token === SyntaxKind.LineBreakTrivia) {

@@ -15,35 +15,35 @@ import * as parser from './parser.ts';
  */
 export const createScanner: (text: string, ignoreTrivia?: boolean) => JSONScanner = scanner.createScanner;
 
-export const enum ScanError {
-	None = 0,
-	UnexpectedEndOfComment = 1,
-	UnexpectedEndOfString = 2,
-	UnexpectedEndOfNumber = 3,
-	InvalidUnicode = 4,
-	InvalidEscapeCharacter = 5,
-	InvalidCharacter = 6
-}
+export const ScanError = {
+	None: 0,
+	UnexpectedEndOfComment: 1,
+	UnexpectedEndOfString: 2,
+	UnexpectedEndOfNumber: 3,
+	InvalidUnicode: 4,
+	InvalidEscapeCharacter: 5,
+	InvalidCharacter:  6
+} as const
 
-export const enum SyntaxKind {
-	OpenBraceToken = 1,
-	CloseBraceToken = 2,
-	OpenBracketToken = 3,
-	CloseBracketToken = 4,
-	CommaToken = 5,
-	ColonToken = 6,
-	NullKeyword = 7,
-	TrueKeyword = 8,
-	FalseKeyword = 9,
-	StringLiteral = 10,
-	NumericLiteral = 11,
-	LineCommentTrivia = 12,
-	BlockCommentTrivia = 13,
-	LineBreakTrivia = 14,
-	Trivia = 15,
-	Unknown = 16,
-	EOF = 17
-}
+export const SyntaxKind = {
+	OpenBraceToken: 1,
+	CloseBraceToken: 2,
+	OpenBracketToken: 3,
+	CloseBracketToken: 4,
+	CommaToken: 5,
+	ColonToken: 6,
+	NullKeyword: 7,
+	TrueKeyword: 8,
+	FalseKeyword: 9,
+	StringLiteral: 10,
+	NumericLiteral: 11,
+	LineCommentTrivia: 12,
+	BlockCommentTrivia: 13,
+	LineBreakTrivia: 14,
+	Trivia: 15,
+	Unknown: 16,
+	EOF: 17
+} as const
 
 /**
  * The scanner object, representing a JSON scanner at a position in the input string.
@@ -56,7 +56,7 @@ export interface JSONScanner {
 	/**
 	 * Read the next token. Returns the token code.
 	 */
-	scan(): SyntaxKind;
+	scan(): number;
 	/**
 	 * Returns the current scan position, which is after the last read token.
 	 */
@@ -64,7 +64,7 @@ export interface JSONScanner {
 	/**
 	 * Returns the last read token.
 	 */
-	getToken(): SyntaxKind;
+	getToken(): number;
 	/**
 	 * Returns the last read token value. The value for strings is the decoded string content. For numbers it's of type number, for boolean it's true or false.
 	 */
@@ -88,7 +88,7 @@ export interface JSONScanner {
 	/**
 	 * An error code of the last scan.
 	 */
-	getTokenError(): ScanError;
+	getTokenError(): number;
 }
 
 

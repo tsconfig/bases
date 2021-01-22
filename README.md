@@ -20,6 +20,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/recommended/tsconfig.json"
 ```
+### Create React App <kbd><a href="./bases/create-react-app.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/create-react-app
+yarn add --dev @tsconfig/create-react-app
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/create-react-app/tsconfig.json"
+```
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:

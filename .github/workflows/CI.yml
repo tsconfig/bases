@@ -11,7 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: denolib/setup-deno@master
         with:
-          deno-version: 1.0.0-rc3
+          deno-version: v1.x
+
   
       # Build all the packages
       - name: Create packages for TSConfig JSONs
@@ -29,4 +30,3 @@ jobs:
             echo "Please update the README via: deno run --allow-read --allow-write scripts/update-markdown-readme.ts"
             exit 1
           fi
-

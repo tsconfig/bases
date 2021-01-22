@@ -4,7 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 'use strict';
 
-import { ScanError, SyntaxKind, JSONScanner } from './jsonc.ts';;
+import type {JSONScanner} from "./jsonc.ts"
+import { ScanError, SyntaxKind } from './jsonc.ts';
 
 /**
  * Creates a JSON scanner on the given text.
@@ -16,12 +17,12 @@ export function createScanner(text: string, ignoreTrivia: boolean = false): JSON
 	let pos = 0,
 		value: string = '',
 		tokenOffset = 0,
-		token: SyntaxKind = SyntaxKind.Unknown,
+		token: number = SyntaxKind.Unknown,
 		lineNumber = 0,
 		lineStartOffset = 0,
 		tokenLineStartOffset = 0,
 		prevTokenLineStartOffset = 0,
-		scanError: ScanError = ScanError.None;
+		scanError: number = ScanError.None;
 
 	function scanHexDigits(count: number, exact?: boolean): number {
 		let digits = 0;
@@ -177,7 +178,7 @@ export function createScanner(text: string, ignoreTrivia: boolean = false): JSON
 		return result;
 	}
 
-	function scanNext(): SyntaxKind {
+	function scanNext(): number {
 
 		value = '';
 		scanError = ScanError.None;
@@ -367,8 +368,8 @@ export function createScanner(text: string, ignoreTrivia: boolean = false): JSON
 	}
 
 
-	function scanNextNonTrivia(): SyntaxKind {
-		let result: SyntaxKind;
+	function scanNextNonTrivia(): number {
+		let result: number;
 		do {
 			result = scanNext();
 		} while (result >= SyntaxKind.LineCommentTrivia && result <= SyntaxKind.Trivia);
