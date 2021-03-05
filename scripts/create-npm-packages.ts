@@ -48,14 +48,19 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
     await Deno.writeTextFile(fileToEdit, packageText)
   };
 
-  // Bump the last version of the number from npm, or default to 1.0.0
-  let version = "1.0.0"
+  // Bump the last version of the number from npm,
+  // or use the _version in tsconfig if it's higher,
+  // or default to 1.0.0
+  let version = tsconfigJSON._version || "1.0.0"
   try {
     const npmResponse = await fetch(`https://registry.npmjs.org/${packageJSON.name}`)
     const npmPackage = await npmResponse.json()
 
     const semverMarkers = npmPackage["dist-tags"].latest.split(".");
-    version = `${semverMarkers[0]}.${semverMarkers[1]}.${Number(semverMarkers[2]) + 1}`;
+    const bumpedVersion = `${semverMarkers[0]}.${semverMarkers[1]}.${Number(semverMarkers[2]) + 1}`;
+    if (isBumpedVersionHigher(version, bumpedVersion)) {
+      version = bumpedVersion;
+    }
   } catch (error) {
     // NOOP, this is for the first deploy 
     // console.log(error)
@@ -67,3 +72,14 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   console.log("Built:", tsconfigEntry.name);
 }
 
+function isBumpedVersionHigher (packageJSONVersion: string, bumpedVersion: string) {
+  const semverMarkersPackageJSON = packageJSONVersion.split('.')
+  const semverMarkersBumped = bumpedVersion.split('.')
+  for (let i = 0; i < 3; i++) {
+    if (Number(semverMarkersBumped[i]) > Number(semverMarkersPackageJSON[i])) {
+      return true
+    }
+  }
+
+  return false
+}
