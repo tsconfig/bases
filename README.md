@@ -104,6 +104,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node14/tsconfig.json"
 ```
+### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/nuxt
+yarn add --dev @tsconfig/nuxt
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/nuxt/tsconfig.json"
+```
 ### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
 
 Install:
