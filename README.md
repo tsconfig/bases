@@ -1,6 +1,6 @@
 ## Centralized Recommendations for TSConfig bases
 
-Hosts TSConfigs for you to extend in your apps, tuned to a particular runtime environment. Owned and improved by the community. 
+Hosts TSConfigs for you to extend in your apps, tuned to a particular runtime environment. Owned and improved by the community.
 Basically Definitely Typed for TSConfigs.
 
 ### Available TSConfigs
@@ -104,6 +104,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node14/tsconfig.json"
 ```
+### Node 16 <kbd><a href="./bases/node16.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node16
+yarn add --dev @tsconfig/node16
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node16/tsconfig.json"
+```
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
 
 Install:
@@ -174,7 +188,7 @@ Create a set of npm packages via:
 deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 ```
 
-You can inspect them in the `packages/` folder, then they are deployed by passing in the paths to the base files via stdin: 
+You can inspect them in the `packages/` folder, then they are deployed by passing in the paths to the base files via stdin:
 
 ```sh
 echo bases/node10.json | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
