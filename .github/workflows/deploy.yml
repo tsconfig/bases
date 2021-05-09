@@ -36,6 +36,8 @@ jobs:
       # Deploy anything which has changed in the last day
       - run: |
          # Have commits been added in the last day?
+         git log --pretty=format: --name-only --since="1 days ago"
+         
          if [[ $(git log --pretty=format: --name-only --since="1 days ago") ]]; then
             git log --pretty=format: --name-only --since="1 days ago" bases | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
          fi
