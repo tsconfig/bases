@@ -76,10 +76,10 @@ function isBumpedVersionHigher (packageJSONVersion: string, bumpedVersion: strin
   const semverMarkersPackageJSON = packageJSONVersion.split('.')
   const semverMarkersBumped = bumpedVersion.split('.')
   for (let i = 0; i < 3; i++) {
-    if (Number(semverMarkersBumped[i]) > Number(semverMarkersPackageJSON[i])) {
-      return true
+    if (Number(semverMarkersPackageJSON[i]) > Number(semverMarkersBumped[i])) {
+      return false
     }
   }
 
-  return false
+  return true
 }
