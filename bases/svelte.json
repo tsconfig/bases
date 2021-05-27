@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Svelte",
-  "_version": "2.0.0",
 
   "compilerOptions": {
     "moduleResolution": "node",
@@ -17,6 +16,8 @@
       enable source maps by default.
      */
     "sourceMap": true,
+    /** Requests the runtime types from the svelte modules by default. Needed for TS files or else you get errors. */
+    "types": ["svelte"],
 
     "strict": false,
     "esModuleInterop": true,
