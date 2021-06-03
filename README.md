@@ -62,6 +62,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/docusaurus/tsconfig.json"
 ```
+### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/next
+yarn add --dev @tsconfig/next
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/next/tsconfig.json"
+```
 ### Node 10 <kbd><a href="./bases/node10.json">tsconfig.json</a></kbd>
 
 Install:
