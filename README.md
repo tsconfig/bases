@@ -34,6 +34,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/create-react-app/tsconfig.json"
 ```
+### Cypress <kbd><a href="./bases/cypress.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/cypress
+yarn add --dev @tsconfig/cypress
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/cypress/tsconfig.json"
+```
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:
@@ -173,20 +187,6 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/svelte/tsconfig.json"
-```
-### Cypress <kbd><a href="./bases/cypress.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/cypress
-yarn add --dev @tsconfig/cypress
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/cypress/tsconfig.json"
 ```
 
 <!-- /AUTO -->

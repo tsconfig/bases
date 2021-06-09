@@ -33,16 +33,9 @@ jobs:
       - name: Create packages for TSConfig JSONs
         run: deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
         
-      # Deploy anything which has changed in the last day
+      # Deploy anything which differs from the npm version of a tsconfig
       - run: |
-         # Have commits been added in the last day?
-         git log --pretty=format: --name-only --since="1 days ago"
-         
-         if [[ $(git log --pretty=format: --name-only --since="1 days ago") ]]; then
-            git log --pretty=format: --name-only --since="1 days ago" bases | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
-         fi
+         deno run --allow-read --allow-run --allow-env --allow-net scripts/deploy-changed-npm-packages.ts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
         name: 'Deploy built packages to NPM'
-
-
