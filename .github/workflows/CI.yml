@@ -1,7 +1,7 @@
 name: CI
 
 # For testing
-on: push
+on: pull_request
 
 jobs:
   ci:
@@ -12,7 +12,6 @@ jobs:
       - uses: denolib/setup-deno@master
         with:
           deno-version: v1.x
-
   
       # Build all the packages
       - name: Create packages for TSConfig JSONs

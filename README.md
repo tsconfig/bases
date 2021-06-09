@@ -219,13 +219,7 @@ deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 You can inspect them in the `packages/` folder, then they are deployed by passing in the paths to the base files via stdin:
 
 ```sh
-echo bases/node10.json | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
-```
-
-or to send in changes from the last 3 weeks:
-
-```sh
-git log --pretty=format: --name-only --since="21 days ago" bases | deno run --allow-read --allow-run --allow-env scripts/deploy-npm-packages.ts
+deno run --allow-read --allow-run --allow-env --allow-net scripts/deploy-changed-npm-packages.ts
 ```
 
 The rest of the files in this repo are for deploying, which uses [Deno](https://deno.land) 1.0.
