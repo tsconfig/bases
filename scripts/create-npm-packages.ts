@@ -44,6 +44,20 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
     packageText = packageText.replace(/\[filename\]/g, name)
                              .replace(/\[display_title\]/g, title)
                              .replace(/\[tsconfig\]/g, Deno.readTextFileSync(tsconfigFilePath))
+    
+    // Inject readme-extra if any
+    try {
+      const readmeExtra = (await Deno.readTextFile(path.join(packagePath, "readme-extras", `${name}.md`))).trim()
+      
+      if (readmeExtra)
+        packageText = packageText.replace(/\[readme-extra\]/g, `\n${readmeExtra}\n`)
+    } catch (error) {
+      // NOOP, there is no extra readme 
+      // console.log(error)
+    }
+    
+    // Remove readme-extra placeholders if any
+    packageText = packageText.replace(/\[readme-extra\]/g, '')
 
     await Deno.writeTextFile(fileToEdit, packageText)
   };
