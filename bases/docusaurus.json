@@ -10,6 +10,10 @@
     "lib": ["DOM"],
     "noEmit": true,
     "noImplicitAny": false,
-    "types": ["node", "@docusaurus/module-type-aliases"]
+    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": ["./*"]
+    }
   }
 }
