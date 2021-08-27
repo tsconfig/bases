@@ -34,6 +34,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/create-react-app/tsconfig.json"
 ```
+### Vite React <kbd><a href="./bases/vite-react.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/vite-react
+yarn add --dev @tsconfig/vite-react
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/vite-react/tsconfig.json"
+```
 ### Cypress <kbd><a href="./bases/cypress.json">tsconfig.json</a></kbd>
 
 Install:
