@@ -37,6 +37,13 @@ Add to your \`tsconfig.json\`:
 "extends": "@tsconfig/${name}/tsconfig.json"
 \`\`\`
 `
+
+  try {
+    const readmeExtra = (await Deno.readTextFile(`./readme-extras/${name}.md`)).trim()
+
+    if (readmeExtra)
+      center += `\n${readmeExtra}\n`
+  } catch (error) {}
 };
 
 const startMarker ="<!-- AUTO -->"
