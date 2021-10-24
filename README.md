@@ -190,6 +190,20 @@ Add to your `tsconfig.json`:
 ```
 
 > **NOTE**: After `@tsconfig/svelte@2.0.0`, you should add `/// <reference types="svelte" />` to a `d.ts` or a `index.ts`(entry) file to prevent typescript error.
+### Vite React <kbd><a href="./bases/vite-react.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/vite-react
+yarn add --dev @tsconfig/vite-react
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/vite-react/tsconfig.json"
+```
 
 <!-- /AUTO -->
 
