@@ -174,6 +174,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/react-native/tsconfig.json"
 ```
+### Remix <kbd><a href="./bases/remix.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/remix
+yarn add --dev @tsconfig/remix
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/remix/tsconfig.json"
+```
 ### Svelte <kbd><a href="./bases/svelte.json">tsconfig.json</a></kbd>
 
 Install:
