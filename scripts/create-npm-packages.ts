@@ -47,7 +47,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
     
     // Inject readme-extra if any
     try {
-      const readmeExtra = (await Deno.readTextFile(path.join(packagePath, "readme-extras", `${name}.md`))).trim()
+      const readmeExtra = (await Deno.readTextFile(path.join("readme-extras", `${name}.md`))).trim()
       
       if (readmeExtra)
         packageText = packageText.replace(/\[readme-extra\]/g, `\n${readmeExtra}\n`)
