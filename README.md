@@ -204,6 +204,20 @@ Add to your `tsconfig.json`:
 ```
 
 > **NOTE**: After `@tsconfig/svelte@2.0.0`, you should add `/// <reference types="svelte" />` to a `d.ts` or a `index.ts`(entry) file to prevent typescript error.
+### Taro <kbd><a href="./bases/taro.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/taro
+yarn add --dev @tsconfig/taro
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/taro/tsconfig.json"
+```
 ### Vite React <kbd><a href="./bases/vite-react.json">tsconfig.json</a></kbd>
 
 Install:
