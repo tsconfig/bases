@@ -31,6 +31,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   const packageJSON = JSON.parse(packageText)
   packageJSON.name = `@tsconfig/${name}`
   packageJSON.description = `A base TSConfig for working with ${tsconfigJSON.display}.`
+  packageJSON.keywords = ["tsconfig", name]
 
   // Do some string replacements in the other templated files
   const replaceTextIn = ["README.md"]
