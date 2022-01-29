@@ -9,11 +9,10 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "preserveConstEnums": true,
     "resolveJsonModule": true,
-    "sourceMap": true,
     "skipLibCheck": true,
     "strict": true,
+    "noEmit": true,
     "jsx": "react-jsx"
   }
 }
