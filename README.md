@@ -188,6 +188,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/remix/tsconfig.json"
 ```
+### Strictest <kbd><a href="./bases/strictest.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/strictest
+yarn add --dev @tsconfig/strictest
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/strictest/tsconfig.json"
+```
 ### Svelte <kbd><a href="./bases/svelte.json">tsconfig.json</a></kbd>
 
 Install:
