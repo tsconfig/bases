@@ -15,7 +15,6 @@
     "noUnusedParameters": true,
 
     "importsNotUsedAsValues": "error",
-    "noEmitOnError": true,
     "checkJs": true,
 
     "esModuleInterop": true,
