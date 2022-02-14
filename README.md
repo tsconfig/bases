@@ -76,6 +76,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/docusaurus/tsconfig.json"
 ```
+### ESM <kbd><a href="./bases/esm.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/esm
+yarn add --dev @tsconfig/esm
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/esm/tsconfig.json"
+```
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
 Install:
@@ -131,6 +145,34 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/node14/tsconfig.json"
+```
+### Node 16 + ESM + Strictest <kbd><a href="./bases/node16-strictest-esm.combined.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node16-strictest-esm
+yarn add --dev @tsconfig/node16-strictest-esm
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node16-strictest-esm/tsconfig.json"
+```
+### Node 16 + Strictest <kbd><a href="./bases/node16-strictest.combined.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node16-strictest
+yarn add --dev @tsconfig/node16-strictest
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node16-strictest/tsconfig.json"
 ```
 ### Node 16 <kbd><a href="./bases/node16.json">tsconfig.json</a></kbd>
 
