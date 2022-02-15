@@ -16,7 +16,7 @@ const sortedPaths = paths.sort((l, r) => l.localeCompare(r)).filter(r => !r.incl
 const basePaths = ["recommended.json", ...sortedPaths]
 for (const base of basePaths) {
   const tsconfigFilePath = path.join("bases", base)
-  const name = path.basename(base).replace(".json", "")
+  const name = path.basename(base).replace(".json", "").replace(".combined", "")
   
   const tsconfigText = await Deno.readTextFile(tsconfigFilePath)
   const tsconfigJSON = parse(tsconfigText)
