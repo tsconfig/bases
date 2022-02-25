@@ -28,6 +28,9 @@ Install:
 
 \`\`\`sh
 npm install --save-dev @tsconfig/${name}
+\`\`\`
+
+\`\`\`sh
 yarn add --dev @tsconfig/${name}
 \`\`\`
 
