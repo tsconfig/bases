@@ -188,6 +188,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node16/tsconfig.json"
 ```
+### Node 17 <kbd><a href="./bases/node17.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node17
+yarn add --dev @tsconfig/node17
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node17/tsconfig.json"
+```
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
 
 Install:
