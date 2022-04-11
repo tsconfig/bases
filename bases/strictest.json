@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "alwaysStrict": true,
-
     "strict": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
