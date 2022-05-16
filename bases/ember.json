@@ -1,0 +1,67 @@
+{
+  // This is the base config used by Ember apps and addons. When actually used
+  // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
+  // `compilerOptions.baseUrl`, `compilerOptions.paths`, and `include` set.
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ES2020",
+    "moduleResolution": "node",
+
+    // Trying to check Ember apps and addons with `allowJs: true` is a recipe
+    // for many unresolveable type errors, because with *considerable* extra
+    // configuration it ends up including many files which are *not* valid and
+    // cannot be: they *appear* to be resolve-able to TS, but are in fact not in
+    // valid Node-resolveable locations and may not have TS-ready types. This
+    // will likely improve over time
+    "allowJs": false,
+
+    // --- TS for SemVer Types compatibility
+    // Strictness settings -- you should *not* change these: Ember code is not
+    // guaranteed to type check with these set to looser values.
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Interop: these are viral and will require anyone downstream of your
+    // package to *also* set them to true. If you *must* enable them to consume
+    // an upstream package, you should document that for downstream consumers to
+    // be aware of.
+    //
+    // These *are* safe for apps to enable, since they do not *have* downstream
+    // consumers; but leaving them off is still preferred when possible, since
+    // it makes it easier to switch between apps and addons and have the same
+    // rules for what can be imported and how.
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
+
+    // --- Lint-style rules
+
+    // TypeScript also supplies some lint-style checks; nearly all of them are
+    // better handled by ESLint with the `@typescript-eslint`. This one is more
+    // like a safety check, though, so we leave it on.
+    "noPropertyAccessFromIndexSignature": true,
+
+    // --- Compilation/integration settings
+    // Setting `noEmitOnError` here allows ember-cli-typescript to catch errors
+    // and inject them into Ember CLI's build error reporting, which provides
+    // nice feedback for when
+    "noEmitOnError": true,
+
+    // We use Babel for emitting runtime code, because it's very important that
+    // we always and only use the same transpiler for non-stable features, in
+    // particular decorators. If you were to change this to `true`, it could
+    // lead to accidentally generating code with `tsc` instead of Babel, and
+    // could thereby result in broken code at runtime.
+    "noEmit": true,
+
+    // Ember makes heavy use of decorators; TS does not support them at all
+    // without this flag.
+    "experimentalDecorators": true,
+
+    // Support generation of source maps. Note: you must *also* enable source
+    // maps in your `ember-cli-babel` config and/or `babel.config.js`.
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true
+  }
+}
