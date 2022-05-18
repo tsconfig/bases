@@ -76,6 +76,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/docusaurus/tsconfig.json"
 ```
+### Ember <kbd><a href="./bases/ember.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/ember
+yarn add --dev @tsconfig/ember
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/ember/tsconfig.json"
+```
 ### ESM <kbd><a href="./bases/esm.json">tsconfig.json</a></kbd>
 
 Install:
