@@ -1,4 +1,8 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Ember",
+  "docs": "https://guides.emberjs.com/release/",
+
   // This is the base config used by Ember apps and addons. When actually used
   // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
   // `compilerOptions.baseUrl`, `compilerOptions.paths`, and `include` set.
