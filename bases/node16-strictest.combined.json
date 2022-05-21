@@ -4,9 +4,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 16 + Strictest",
   "compilerOptions": {
-    "lib": [
-      "es2021"
-    ],
+    "lib": ["es2021"],
     "module": "commonjs",
     "target": "es2021",
     "strict": true,
@@ -24,6 +22,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importsNotUsedAsValues": "error",
-    "checkJs": true
+    "checkJs": true,
+    "moduleResolution": "node"
   }
 }
