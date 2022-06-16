@@ -4,6 +4,8 @@
 const inputs: CombinedConfigInput[] = [
   { base: "node16", extends: ["esm", "strictest"] },
   { base: "node16", extends: ["strictest"] },
+  { base: "node18", extends: ["esm", "strictest"] },
+  { base: "node18", extends: ["strictest"] },
 ];
 
 import * as path from "https://deno.land/std/path/mod.ts";
