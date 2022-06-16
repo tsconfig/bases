@@ -216,6 +216,34 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node17/tsconfig.json"
 ```
+### Node 18 + ESM + Strictest <kbd><a href="./bases/node18-strictest-esm.combined.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node18-strictest-esm
+yarn add --dev @tsconfig/node18-strictest-esm
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node18-strictest-esm/tsconfig.json"
+```
+### Node 18 + Strictest <kbd><a href="./bases/node18-strictest.combined.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node18-strictest
+yarn add --dev @tsconfig/node18-strictest
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node18-strictest/tsconfig.json"
+```
 ### Node 18 <kbd><a href="./bases/node18.json">tsconfig.json</a></kbd>
 
 Install:
