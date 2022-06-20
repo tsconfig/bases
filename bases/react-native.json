@@ -4,6 +4,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
+    "types": ["react-native", "jest"],
     "lib": [
       "es2017"
     ],
