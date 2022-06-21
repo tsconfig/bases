@@ -4,11 +4,13 @@
 const inputs: CombinedConfigInput[] = [
   { base: "node16", extends: ["esm", "strictest"] },
   { base: "node16", extends: ["strictest"] },
+  { base: "node18", extends: ["esm", "strictest"] },
+  { base: "node18", extends: ["strictest"] },
 ];
 
 import * as path from "https://deno.land/std/path/mod.ts";
 import { parse } from "./vendor/node-jsonc-parser/jsonc.ts";
-import { deepMerge } from "https://deno.land/std/collections/mod.ts";
+import { deepMerge } from "https://deno.land/std/collections/deep_merge.ts";
 
 type CombinedConfigInput = {
   base: string;
