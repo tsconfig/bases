@@ -13,10 +13,11 @@
     "noUnusedParameters": true,
 
     "importsNotUsedAsValues": "error",
+    "allowJs": true,
     "checkJs": true,
 
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "forceConsistentCasingInFileNames": true
   },
   "$schema": "https://json.schemastore.org/tsconfig",
