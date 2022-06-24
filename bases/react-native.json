@@ -1,9 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Native",
+   "_version": "2.0.0",
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
+    "types": ["react-native", "jest"],
     "lib": [
       "es2017"
     ],
