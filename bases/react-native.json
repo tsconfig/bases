@@ -7,7 +7,7 @@
     "module": "commonjs",
     "types": ["react-native", "jest"],
     "lib": [
-      "es2017"
+      "es2019"
     ],
     "allowJs": true,
     "jsx": "react-native",
