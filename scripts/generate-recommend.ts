@@ -12,7 +12,7 @@ for await (const line of bufio.readLines(p.stdout!)) {
 
 let packageText = await Deno.readTextFile(path.join(tsconfigStorage, "tsconfig.json"));
 // This will strip comments
-const parsed = JSOn.parse(stripJsonComments(packageText));
+const parsed = JSON.parse(stripJsonComments(packageText));
 
 parsed["$schema"] = "https://json.schemastore.org/tsconfig";
 parsed.display = "Recommended";
