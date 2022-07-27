@@ -1,7 +1,7 @@
 // deno run --allow-read --allow-write scripts/update-markdown-readme.ts
 //
 import * as path from "https://deno.land/std/path/mod.ts";
-import {parse} from "./vendor/node-jsonc-parser/jsonc.ts"
+import stripJsonComments from "https://esm.sh/strip-json-comments";
 
 const readme = await Deno.readTextFileSync("./README.md")
 let center = ""
@@ -19,7 +19,7 @@ for (const base of basePaths) {
   const name = path.basename(base).replace(".json", "").replace(".combined", "")
   
   const tsconfigText = await Deno.readTextFile(tsconfigFilePath)
-  const tsconfigJSON = parse(tsconfigText)
+  const tsconfigJSON = JSON.parse(stripJsonComments(tsconfigText))
 
   center += `### ${tsconfigJSON.display} <kbd><a href="./bases/${base}">tsconfig.json</a></kbd>\n`
 

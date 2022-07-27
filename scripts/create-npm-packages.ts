@@ -1,5 +1,5 @@
 import * as path from "https://deno.land/std/path/mod.ts";
-import {parse} from "./vendor/node-jsonc-parser/jsonc.ts"
+import stripJsonComments from "https://esm.sh/strip-json-comments";
 
 for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
@@ -24,7 +24,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   Deno.copyFileSync(tsconfigFilePath, newPackageTSConfigPath)
   
   const tsconfigText = await Deno.readTextFile(newPackageTSConfigPath)
-  const tsconfigJSON = parse(tsconfigText)
+  const tsconfigJSON = JSON.parse(stripJsonComments(tsconfigText))
 
   // Edit the package.json
   const packageText = await Deno.readTextFile(path.join(packagePath, "package.json"))
@@ -82,7 +82,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   }
   
   packageJSON.version = version
-  await Deno.writeTextFile(path.join(packagePath, "package.json"), JSON.stringify(packageJSON))
+  await Deno.writeTextFile(path.join(packagePath, "package.json"), JSON.stringify(packageJSON, null, "  "))
 
   console.log("Built:", tsconfigEntry.name);
 }

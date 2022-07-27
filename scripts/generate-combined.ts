@@ -9,7 +9,7 @@ const inputs: CombinedConfigInput[] = [
 ];
 
 import * as path from "https://deno.land/std/path/mod.ts";
-import { parse } from "./vendor/node-jsonc-parser/jsonc.ts";
+import stripJsonComments from "https://esm.sh/strip-json-comments";
 import { deepMerge } from "https://deno.land/std/collections/deep_merge.ts";
 
 type CombinedConfigInput = {
@@ -56,7 +56,7 @@ for (const input of new Set(inputs.map((x) => [x.base, x.extends]).flat(2))) {
     path.join(Deno.cwd(), "bases", `${input}.json`),
   );
 
-  const parsed = parse(packageText) as Tsconfig;
+  const parsed = JSON.parse(stripJsonComments(packageText)) as Tsconfig;
 
   configCache.set(input, parsed);
 }
