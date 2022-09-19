@@ -10,10 +10,14 @@
     "resolveJsonModule": true,
     "target": "ES2019",
     "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     },
+
+    // Remix takes care of building everything in `remix build`.
     "noEmit": true
   }
 }
