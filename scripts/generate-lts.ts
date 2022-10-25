@@ -92,8 +92,8 @@ const mergedConfigs: Map<CombinedConfigInput, Tsconfig> = new Map();
 
 for (const input of inputs) {
   const configs = [input.base, ...input.extends].map((name) => {
-    const c = configCache.get(name);
-    if (c && name === input.base) {
+    const c = configCache.get(name)!;
+    if (name === input.base) {
       c.display = "Node LTS"
     }
     return c;
