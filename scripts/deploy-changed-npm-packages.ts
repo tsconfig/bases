@@ -1,5 +1,5 @@
 import * as path from "https://deno.land/std/path/mod.ts";
-import * as bufio from "https://deno.land/std/io/bufio.ts";
+import * as bufio from "https://deno.land/std/io/buffer.ts";
 
 // Loop through generated packages, deploying versions for anything which has a different tsconfig
 const uploaded = []
