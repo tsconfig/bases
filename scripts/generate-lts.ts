@@ -1,4 +1,4 @@
-// deno run --allow-read --allow-write scripts/generate-combined.ts
+// deno run --allow-read --allow-write scripts/generate-lts.ts
 //
 
 interface NodeReleaseMetadata {
@@ -45,7 +45,7 @@ const lts = releasesJson
   );
 const baseMajorVersion = (lts.version.match(versionRegex) || [])[1];
 const base = `node${baseMajorVersion}`;
-const name = "nodeLts";
+const name = "node-lts";
 const versioned = {
   $schema: "https://json.schemastore.org/tsconfig",
   display: "Node LTS",
