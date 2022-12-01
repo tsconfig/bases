@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Ember",
   "docs": "https://docs.ember-cli-typescript.com",
+  "_version": "1.1.0",
 
   // This is the base config used by Ember apps and addons. When actually used
   // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
@@ -25,17 +26,15 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
 
-    // Interop: these are viral and will require anyone downstream of your
-    // package to *also* set them to true. If you *must* enable them to consume
-    // an upstream package, you should document that for downstream consumers to
-    // be aware of.
-    //
-    // These *are* safe for apps to enable, since they do not *have* downstream
-    // consumers; but leaving them off is still preferred when possible, since
-    // it makes it easier to switch between apps and addons and have the same
-    // rules for what can be imported and how.
-    "allowSyntheticDefaultImports": false,
-    "esModuleInterop": false,
+    // Interop: this is viral and will require anyone downstream of your package
+    // to *also* set them to true. However, this represents the way that
+    // bundlers actually work, and is future-compatible with the closest module
+    // modes: "nodenext" in TS 4.7+ and "mixed" in 5.0+ mode. Since Ember apps
+    // and addons never emit with `tsc`, this is safe: it makes type-checking do
+    // the right thing, but does not result in changes to what gets emitted. We
+    // intentionally leave `esModuleInterop` unset, so that it gets whatever TS
+    // provides as the default for the currently-specified `module` mode.
+    "allowSyntheticDefaultImports": true,
 
     // --- Lint-style rules
 
