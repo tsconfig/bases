@@ -104,7 +104,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/esm/tsconfig.json"
 ```
-### Next.js <kbd><a href="./bases/next-strictest.json">tsconfig.json</a></kbd>
+### Next.js + Strictest <kbd><a href="./bases/next-strictest.json">tsconfig.json</a></kbd>
 
 Install:
 
