@@ -9,7 +9,7 @@
     "jsx": "react",
     "lib": ["DOM"],
     "noEmit": true,
-    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
+    "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/preset-classic"],
     "baseUrl": ".",
     "paths": {
       "@site/*": ["./*"]
