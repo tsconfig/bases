@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["DOM"],
+    "moduleResolution": "Node16",
     "noEmit": true,
     "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
     "baseUrl": ".",
