@@ -5,7 +5,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
   
   const tsconfigFilePath = path.join("bases", tsconfigEntry.name)
-  const name = path.basename(tsconfigEntry.name).replace(".json", "").replace(".combined", "")
+  const name = path.basename(tsconfigEntry.name).replace(".json", "")
 
   // Make the folder
   const packagePath = path.join("packages", name)
