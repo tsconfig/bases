@@ -12,7 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "checkJs": true,
 
     "esModuleInterop": true,
