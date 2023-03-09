@@ -319,6 +319,24 @@ Add to your `tsconfig.json`:
 
 <!-- /AUTO -->
 
+### What about combined configs?
+
+Because of previous limitations in the config extension system of TypeScript,
+this repo used to provide combined configs from a few common bases (like Node + ESM,
+Node + Strictest and so on).
+
+This issue is now moot since TypeScript v5.0.0, which provides the [ability to 
+extend from multiple configs at once](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0-rc/#supporting-multiple-configuration-files-in-extends). For instance, if you want
+to start from a Node 18 + Strictest base config, you can install both
+`@tsconfig/node18` and `@tsconfig/strictest` packages and extend those configs like so:
+
+```jsonc
+// tsconfig.json
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"]
+}
+```
+
 ### Contributing
 
 ```sh
