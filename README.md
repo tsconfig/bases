@@ -132,34 +132,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/next/tsconfig.json"
 ```
-### Node LTS + ESM + Strictest <kbd><a href="./bases/node-lts-strictest-esm.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node-lts-strictest-esm
-yarn add --dev @tsconfig/node-lts-strictest-esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json"
-```
-### Node LTS + Strictest <kbd><a href="./bases/node-lts-strictest.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node-lts-strictest
-yarn add --dev @tsconfig/node-lts-strictest
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node-lts-strictest/tsconfig.json"
-```
 ### Node LTS <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
 
 Install:
