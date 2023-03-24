@@ -20,5 +20,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Strictest"
+  "display": "Strictest",
+  "_version": "2.0.0"
 }
