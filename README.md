@@ -104,20 +104,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/esm/tsconfig.json"
 ```
-### Next.js + Strictest <kbd><a href="./bases/next-strictest.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/next-strictest
-yarn add --dev @tsconfig/next-strictest
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/next-strictest/tsconfig.json"
-```
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
 Install:
@@ -131,34 +117,6 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/next/tsconfig.json"
-```
-### Node LTS + ESM + Strictest <kbd><a href="./bases/node-lts-strictest-esm.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node-lts-strictest-esm
-yarn add --dev @tsconfig/node-lts-strictest-esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node-lts-strictest-esm/tsconfig.json"
-```
-### Node LTS + Strictest <kbd><a href="./bases/node-lts-strictest.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node-lts-strictest
-yarn add --dev @tsconfig/node-lts-strictest
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node-lts-strictest/tsconfig.json"
 ```
 ### Node LTS <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
 
@@ -216,34 +174,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node14/tsconfig.json"
 ```
-### Node 16 + ESM + Strictest <kbd><a href="./bases/node16-strictest-esm.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node16-strictest-esm
-yarn add --dev @tsconfig/node16-strictest-esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node16-strictest-esm/tsconfig.json"
-```
-### Node 16 + Strictest <kbd><a href="./bases/node16-strictest.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node16-strictest
-yarn add --dev @tsconfig/node16-strictest
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node16-strictest/tsconfig.json"
-```
 ### Node 16 <kbd><a href="./bases/node16.json">tsconfig.json</a></kbd>
 
 Install:
@@ -271,34 +201,6 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/node17/tsconfig.json"
-```
-### Node 18 + ESM + Strictest <kbd><a href="./bases/node18-strictest-esm.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node18-strictest-esm
-yarn add --dev @tsconfig/node18-strictest-esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node18-strictest-esm/tsconfig.json"
-```
-### Node 18 + Strictest <kbd><a href="./bases/node18-strictest.combined.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/node18-strictest
-yarn add --dev @tsconfig/node18-strictest
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/node18-strictest/tsconfig.json"
 ```
 ### Node 18 <kbd><a href="./bases/node18.json">tsconfig.json</a></kbd>
 
@@ -416,6 +318,24 @@ Add to your `tsconfig.json`:
 ```
 
 <!-- /AUTO -->
+
+### What about combined configs?
+
+Because of previous limitations in the config extension system of TypeScript,
+this repo used to provide combined configs from a few common bases (like Node + ESM,
+Node + Strictest and so on).
+
+This issue is now moot since TypeScript v5.0.0, which provides the [ability to 
+extend from multiple configs at once](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0-rc/#supporting-multiple-configuration-files-in-extends). For instance, if you want
+to start from a Node 18 + Strictest base config, you can install both
+`@tsconfig/node18` and `@tsconfig/strictest` packages and extend those configs like so:
+
+```jsonc
+// tsconfig.json
+{
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"]
+}
+```
 
 ### Contributing
 
