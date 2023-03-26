@@ -8,18 +8,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: denolib/setup-deno@master
+      - name: Checkout tree
+        uses: actions/checkout@v3
+
+      - name: Set-up Deno
+        uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-  
+
       # Build all the packages
       - name: Create packages for TSConfig JSONs
         run: deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 
       - name: Update the README
         run: deno run --allow-read --allow-write --allow-net scripts/update-markdown-readme.ts
-      
+
       - name: Fail if the README needs updating
         run: |
           if [[ -z $(git status -s) ]]
