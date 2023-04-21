@@ -216,6 +216,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node18/tsconfig.json"
 ```
+### Node 19 <kbd><a href="./bases/node19.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node19
+yarn add --dev @tsconfig/node19
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node19/tsconfig.json"
+```
 ### Node 20 <kbd><a href="./bases/node20.json">tsconfig.json</a></kbd>
 
 Install:
