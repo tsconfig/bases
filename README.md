@@ -365,6 +365,8 @@ to start from a Node 18 + Strictest base config, you can install both
 }
 ```
 
+You can see the result of the combined configs via `tsc --showConfig`.
+
 ### Contributing
 
 ```sh
