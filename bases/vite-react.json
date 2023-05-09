@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Vite React",
+  "_version": "2.0.0",
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -12,7 +13,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
