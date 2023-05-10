@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Native",
-  "_version": "3.0.0",
+  "_version": "3.0.1",
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
@@ -29,7 +29,7 @@
     "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
