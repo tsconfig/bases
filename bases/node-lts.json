@@ -8,7 +8,7 @@
     "lib": [
       "es2022"
     ],
-    "module": "commonjs",
+    "module": "Node16",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
