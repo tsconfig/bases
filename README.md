@@ -90,20 +90,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/ember/tsconfig.json"
 ```
-### ESM <kbd><a href="./bases/esm.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/esm
-yarn add --dev @tsconfig/esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/esm/tsconfig.json"
-```
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
 Install:
