@@ -6,6 +6,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "target": "ES2019",
