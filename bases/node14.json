@@ -4,13 +4,13 @@
 
   "compilerOptions": {
     "lib": ["es2020"],
-    "module": "commonjs",
+    "module": "node16",
     "target": "es2020",
 
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node16"
   }
 }

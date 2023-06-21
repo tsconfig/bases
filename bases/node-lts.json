@@ -3,10 +3,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node LTS",
-  "_version": "18.12.1",
+  "_version": "2.0.0",
   "compilerOptions": {
     "lib": [
-      "es2022"
+      "es2023"
     ],
     "module": "Node16",
     "target": "es2022",
@@ -14,6 +14,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node16"
   }
 }

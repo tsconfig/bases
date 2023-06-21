@@ -10,7 +10,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "module": "ES2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
 
     // Trying to check Ember apps and addons with `allowJs: true` is a recipe
     // for many unresolveable type errors, because with *considerable* extra

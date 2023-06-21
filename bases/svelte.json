@@ -4,7 +4,8 @@
   "_version": "4.0.0",
 
   "compilerOptions": {
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "target": "es2017",
     /**
       Svelte Preprocess cannot figure out whether you have a value or a type, so tell TypeScript
