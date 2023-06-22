@@ -3,6 +3,8 @@
 Hosts TSConfigs for you to extend in your apps, tuned to a particular runtime environment. Owned and improved by the community.
 Basically Definitely Typed for TSConfigs.
 
+We target the latest versions stable version of TypeScript, note that because we want to be consistent with the versioning the target runtime we can't always do semver releases.
+
 ### Available TSConfigs
 
 <!-- AUTO -->
