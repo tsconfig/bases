@@ -355,6 +355,10 @@ to start from a Node 18 + Strictest base config, you can install both
 
 You can see the result of the combined configs via `tsc --showConfig`.
 
+### What about `@tsconfig/esm`?
+
+We deprecated it in favour of setting [module/moduleResolution](https://github.com/tsconfig/bases/pull/197) to node/bundler.
+
 ### Contributing
 
 ```sh
