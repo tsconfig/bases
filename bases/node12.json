@@ -1,16 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 12",
+  "_version": "12.1.0",
 
   "compilerOptions": {
     "lib": ["es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
-    "module": "commonjs",
+    "module": "node16",
     "target": "es2019",
 
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node16"
   }
 }

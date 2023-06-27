@@ -2,15 +2,15 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Ember",
   "docs": "https://docs.ember-cli-typescript.com",
-  "_version": "2.0.0",
+  "_version": "3.0.0",
 
   // This is the base config used by Ember apps and addons. When actually used
   // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
   // `compilerOptions.baseUrl`, `compilerOptions.paths`, and `include` set.
   "compilerOptions": {
     "target": "ES2021",
-    "module": "ES2020",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     // Trying to check Ember apps and addons with `allowJs: true` is a recipe
     // for many unresolveable type errors, because with *considerable* extra
