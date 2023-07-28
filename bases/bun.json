@@ -1,0 +1,29 @@
+{
+  // This is based on https://bun.sh/docs/runtime/typescript#recommended-compileroptions
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Bun",
+  "docs": "https://bun.sh/docs/runtime/typescript",
+  "compilerOptions": {
+    // add Bun type definitions
+    "types": [
+      "bun-types"
+    ],
+    // enable latest features
+    "lib": [
+      "ESNext"
+    ],
+    "module": "ESNext",
+    "target": "ESNext",
+    // if TS 5.x+
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    // support JSX
+    "jsx": "react-jsx",
+    // best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
