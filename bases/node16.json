@@ -5,7 +5,7 @@
 
   "compilerOptions": {
     "lib": ["es2021"],
-    "module": "Node16",
+    "module": "node16",
     "target": "es2021",
 
     "strict": true,
