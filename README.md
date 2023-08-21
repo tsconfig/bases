@@ -22,6 +22,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/recommended/tsconfig.json"
 ```
+### Bun <kbd><a href="./bases/bun.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/bun
+yarn add --dev @tsconfig/bun
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/bun/tsconfig.json"
+```
 ### Create React App <kbd><a href="./bases/create-react-app.json">tsconfig.json</a></kbd>
 
 Install:
