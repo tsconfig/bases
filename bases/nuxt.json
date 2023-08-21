@@ -4,7 +4,7 @@
   "_version": "2.0.0",
   
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "lib": [
