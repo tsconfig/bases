@@ -5,6 +5,7 @@
 
   "compilerOptions": {
     "module": "es2022",
+    "moduleDetection": "force",
     "moduleResolution": "bundler",
 
     "verbatimModuleSyntax": true
