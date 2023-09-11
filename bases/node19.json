@@ -2,17 +2,17 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 19",
 
-  "_version": "2.0.0",
+  "_version": "19.1.0",
 
   "compilerOptions": {
     "lib": ["es2023"],
-    "module": "commonjs",
+    "module": "Node16",
     "target": "es2022",
 
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node16"
   }
 }

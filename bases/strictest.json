@@ -12,6 +12,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
+    "isolatedModules": true,
+
     "allowJs": true,
     "checkJs": true,
 

@@ -1,6 +1,9 @@
 // deno run --allow-read --allow-write scripts/generate-lts.ts
 //
 
+import { gt } from "https://deno.land/std@0.192.0/semver/gt.ts";
+import { parse } from "https://deno.land/std@0.192.0/semver/parse.ts";
+
 interface NodeReleaseMetadata {
   version: string;
   date: string;
@@ -19,20 +22,12 @@ type Tsconfig = Record<string, any>;
 
 const versionRegex = /v(\d+)\.(\d+)\.(\d+)/;
 
-function calcVersion(x: string) {
-  const match = x.match(versionRegex);
-  if (!match) {
-    throw new Error(`version regex failed to match version string '${x}'`);
-  }
-  return +match[1] * 1000000 + +match[2] * 1000 + +match[3];
-}
-
 const releasesResponse = await fetch("https://nodejs.org/download/release/index.json");
 const releasesJson = (await releasesResponse.json()) as NodeReleaseMetadata[];
 const lts = releasesJson
   .filter((r) => r.lts)
   .reduce(
-    (prevValue, currValue) => (calcVersion(currValue.version) > calcVersion(prevValue.version) ? currValue : prevValue),
+    (prevValue, currValue) => (gt(parse(currValue.version), parse(prevValue.version)) ? currValue : prevValue),
     {
       version: "v0.0.0"
     }

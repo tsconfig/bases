@@ -2,13 +2,15 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Docusaurus v2",
   "docs": "https://v2.docusaurus.io/docs/typescript-support",
+  "_version": "2.0.0",
   
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["DOM"],
-    "moduleResolution": "Node16",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "types": ["node", "@docusaurus/module-type-aliases", "@docusaurus/theme-classic"],
     "baseUrl": ".",

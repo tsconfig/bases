@@ -3,6 +3,8 @@
 Hosts TSConfigs for you to extend in your apps, tuned to a particular runtime environment. Owned and improved by the community.
 Basically Definitely Typed for TSConfigs.
 
+We target the latest versions stable version of TypeScript, note that because we want to be consistent with the versioning the target runtime we can't always do semver releases.
+
 ### Available TSConfigs
 
 <!-- AUTO -->
@@ -19,6 +21,20 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/recommended/tsconfig.json"
+```
+### Bun <kbd><a href="./bases/bun.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/bun
+yarn add --dev @tsconfig/bun
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/bun/tsconfig.json"
 ```
 ### Create React App <kbd><a href="./bases/create-react-app.json">tsconfig.json</a></kbd>
 
@@ -89,20 +105,6 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/ember/tsconfig.json"
-```
-### ESM <kbd><a href="./bases/esm.json">tsconfig.json</a></kbd>
-
-Install:
-
-```sh
-npm install --save-dev @tsconfig/esm
-yarn add --dev @tsconfig/esm
-```
-
-Add to your `tsconfig.json`:
-
-```json
-"extends": "@tsconfig/esm/tsconfig.json"
 ```
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
@@ -366,6 +368,10 @@ to start from a Node 18 + Strictest base config, you can install both
 ```
 
 You can see the result of the combined configs via `tsc --showConfig`.
+
+### What about `@tsconfig/esm`?
+
+We deprecated it in favour of setting [module/moduleResolution](https://github.com/tsconfig/bases/pull/197) to node/bundler.
 
 ### Contributing
 

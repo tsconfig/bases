@@ -1,12 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Remix",
+  "_version": "2.0.0",
+
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "target": "ES2019",
     "strict": true,
