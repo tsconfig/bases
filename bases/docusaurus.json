@@ -8,7 +8,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["DOM"],
+    "lib": ["dom"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
