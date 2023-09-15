@@ -8,7 +8,7 @@
   // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
   // `compilerOptions.baseUrl`, `compilerOptions.paths`, and `include` set.
   "compilerOptions": {
-    "target": "ES2021",
+    "target": "es2021",
     "module": "esnext",
     "moduleResolution": "bundler",
 

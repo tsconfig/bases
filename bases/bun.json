@@ -14,8 +14,8 @@
     "lib": [
       "ESNext"
     ],
-    "module": "ESNext",
-    "target": "ESNext",
+    "module": "esnext",
+    "target": "esnext",
 
     // if TS 5.x+
     "moduleResolution": "bundler",
