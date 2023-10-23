@@ -12,6 +12,10 @@
     "module": "esnext",
     "moduleResolution": "bundler",
 
+    // We don't want to include types dependencies in our compiled output, so tell TypeScript
+    // to enforce using `import type` instead of `import` for Types.
+    "verbatimModuleSyntax": true,
+
     // Trying to check Ember apps and addons with `allowJs: true` is a recipe
     // for many unresolveable type errors, because with *considerable* extra
     // configuration it ends up including many files which are *not* valid and
