@@ -1,4 +1,4 @@
-// deno run --allow-read --allow-write scripts/generate-lts.ts
+// deno run --allow-read --allow-write --allow-net scripts/generate-lts.ts
 //
 
 import { gt } from "https://deno.land/std@0.192.0/semver/gt.ts";
