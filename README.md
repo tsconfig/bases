@@ -16,7 +16,7 @@ We target the latest versions stable version of TypeScript, note that because we
 | [Deno](#deno-tsconfigjson)                         | [`@tsconfig/deno`](https://npmjs.com/package/@tsconfig/deno)                         |
 | [Docusaurus v2](#docusaurus-v2-tsconfigjson)       | [`@tsconfig/docusaurus`](https://npmjs.com/package/@tsconfig/docusaurus)             |
 | [Ember](#ember-tsconfigjson)                       | [`@tsconfig/ember`](https://npmjs.com/package/@tsconfig/ember)                       |
-| [Next.js](#nuxt-tsconfigjson)                      | [`@tsconfig/next`](https://npmjs.com/package/@tsconfig/next)                         |
+| [Next.js](#nextjs-tsconfigjson)                    | [`@tsconfig/next`](https://npmjs.com/package/@tsconfig/next)                         |
 | [Node LTS](#node-lts-tsconfigjson)                 | [`@tsconfig/node-lts`](https://npmjs.com/package/@tsconfig/node-lts)                 |
 | [Node 10](#node-10-tsconfigjson)                   | [`@tsconfig/node10`](https://npmjs.com/package/@tsconfig/node10)                     |
 | [Node 12](#node-12-tsconfigjson)                   | [`@tsconfig/node12`](https://npmjs.com/package/@tsconfig/node12)                     |
