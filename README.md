@@ -122,6 +122,8 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/docusaurus/tsconfig.json"
 ```
+
+> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
 ### Ember <kbd><a href="./bases/ember.json">tsconfig.json</a></kbd>
 
 Install:
@@ -136,6 +138,8 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/ember/tsconfig.json"
 ```
+
+> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
 Install:
@@ -304,6 +308,8 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/nuxt/tsconfig.json"
 ```
+
+> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
 ### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
 
 Install:
@@ -332,6 +338,8 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/remix/tsconfig.json"
 ```
+
+> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
 ### Strictest <kbd><a href="./bases/strictest.json">tsconfig.json</a></kbd>
 
 Install:
