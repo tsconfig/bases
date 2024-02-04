@@ -5,11 +5,6 @@
   "docs": "https://bun.sh/docs/runtime/typescript",
 
   "compilerOptions": {
-    // add Bun type definitions
-    "types": [
-      "bun-types"
-    ],
-
     // enable latest features
     "lib": [
       "ESNext"
