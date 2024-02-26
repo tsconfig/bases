@@ -48,10 +48,13 @@
     "noPropertyAccessFromIndexSignature": true,
 
     // --- Compilation/integration settings
-    // Setting `noEmitOnError` here allows ember-cli-typescript to catch errors
-    // and inject them into Ember CLI's build error reporting, which provides
-    // nice feedback for when
-    "noEmitOnError": true,
+    // Setting `noEmitOnError` here allows tools trying to respect the tsconfig
+    // to still emit code without breaking on errors.
+    // Errors are still reported in the CLI when running `tsc` or `glint`,
+    // but the errors won't prevent code from being emitted.
+    // This helps hasten development by allowing devs to prototype before coming
+    // to a decision on what they want their types to be.
+    "noEmitOnError": false,
 
     // We use Babel for emitting runtime code, because it's very important that
     // we always and only use the same transpiler for non-stable features, in
