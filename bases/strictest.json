@@ -17,8 +17,7 @@
     "checkJs": true,
 
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true
   },
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Strictest",
