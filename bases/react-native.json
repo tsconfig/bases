@@ -29,7 +29,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": false,
     "esModuleInterop": true,
     "skipLibCheck": true
   }
