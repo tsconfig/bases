@@ -1,5 +1,5 @@
 import stripJsonComments from "https://esm.sh/strip-json-comments";
-import * as bufio from "https://deno.land/std/io/buffer.ts";
+import * as bufio from "https://deno.land/std@0.164.0/io/buffer.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 
 const tsconfigStorage = await Deno.makeTempDir({ prefix: "tsconfig" });
