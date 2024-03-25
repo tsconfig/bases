@@ -26,6 +26,9 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   const tsconfigText = await Deno.readTextFile(newPackageTSConfigPath)
   const tsconfigJSON = JSON.parse(stripJsonComments(tsconfigText))
 
+// Drop `display` field in tsconfig.json for npm package 
+  await Deno.writeTextFile(newPackageTSConfigPath, tsconfigText.replace(/\s*"display.*/,''))
+
   // Edit the package.json
   const packageText = await Deno.readTextFile(path.join(packagePath, "package.json"))
   const packageJSON = JSON.parse(packageText)
