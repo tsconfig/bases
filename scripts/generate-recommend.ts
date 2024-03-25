@@ -14,8 +14,9 @@ let packageText = await Deno.readTextFile(path.join(tsconfigStorage, "tsconfig.j
 // This will strip comments
 const parsed = JSON.parse(stripJsonComments(packageText));
 
-parsed["$schema"] = "https://json.schemastore.org/tsconfig";
+// `display` field will be dropped at generating npm package, so prevent the order from being last in the JSON file
 parsed.display = "Recommended";
+parsed["$schema"] = "https://json.schemastore.org/tsconfig";
 parsed.compilerOptions.target = "ES2015";
 
 const result = JSON.stringify(parsed, null, "  ");
