@@ -1,5 +1,5 @@
 import stripJsonComments from "https://esm.sh/strip-json-comments";
-import * as bufio from "https://deno.land/std/io/buffer.ts";
+import * as bufio from "https://deno.land/std@0.164.0/io/buffer.ts";
 import * as path from "https://deno.land/std/path/mod.ts";
 
 const tsconfigStorage = await Deno.makeTempDir({ prefix: "tsconfig" });
@@ -14,9 +14,9 @@ let packageText = await Deno.readTextFile(path.join(tsconfigStorage, "tsconfig.j
 // This will strip comments
 const parsed = JSON.parse(stripJsonComments(packageText));
 
-parsed["$schema"] = "https://json.schemastore.org/tsconfig";
+// `display` field will be dropped at generating npm package, so prevent the order from being last in the JSON file
 parsed.display = "Recommended";
-parsed.compilerOptions.target = "ES2015";
+parsed["$schema"] = "https://json.schemastore.org/tsconfig";
 
 const result = JSON.stringify(parsed, null, "  ");
 
