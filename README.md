@@ -8,7 +8,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 ### Table of TSConfigs
 
 | Name                                               | Package                                                                              |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------ |
+|----------------------------------------------------|--------------------------------------------------------------------------------------|
 | [Recommended](#recommended-tsconfigjson)           | [`@tsconfig/recommended`](https://npmjs.com/package/@tsconfig/recommended)           |
 | [Bun](#bun-tsconfigjson)                           | [`@tsconfig/bun`](https://npmjs.com/package/@tsconfig/bun)                           |
 | [Create React App](#create-react-app-tsconfigjson) | [`@tsconfig/create-react-app`](https://npmjs.com/package/@tsconfig/create-react-app) |
@@ -34,6 +34,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Svelte](#svelte-tsconfigjson)                     | [`@tsconfig/svelte`](https://npmjs.com/package/@tsconfig/svelte)                     |
 | [Taro](#taro-tsconfigjson)                         | [`@tsconfig/taro`](https://npmjs.com/package/@tsconfig/taro)                         |
 | [Vite React](#vite-react-tsconfigjson)             | [`@tsconfig/vite-react`](https://npmjs.com/package/@tsconfig/vite-react)             |
+| [Vite Vue](#vite-vue-tsconfigjson)                 | [`@tsconfig/vite-vue`](https://npmjs.com/package/@tsconfig/vite-vue)                 |
 
 ### Available TSConfigs
 
@@ -397,6 +398,21 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/vite-react/tsconfig.json"
+```
+
+### Vite Vue <kbd><a href="./bases/vite-vue.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/vite-vue
+yarn add --dev @tsconfig/vite-vue
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/vite-vue/tsconfig.json"
 ```
 
 <!-- /AUTO -->
