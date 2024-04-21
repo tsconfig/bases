@@ -399,7 +399,6 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/vite-react/tsconfig.json"
 ```
-
 ### Vite Vue <kbd><a href="./bases/vite-vue.json">tsconfig.json</a></kbd>
 
 Install:
