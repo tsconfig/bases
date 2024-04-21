@@ -8,7 +8,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 ### Table of TSConfigs
 
 | Name                                               | Package                                                                              |
-|----------------------------------------------------|--------------------------------------------------------------------------------------|
+| -------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | [Recommended](#recommended-tsconfigjson)           | [`@tsconfig/recommended`](https://npmjs.com/package/@tsconfig/recommended)           |
 | [Bun](#bun-tsconfigjson)                           | [`@tsconfig/bun`](https://npmjs.com/package/@tsconfig/bun)                           |
 | [Create React App](#create-react-app-tsconfigjson) | [`@tsconfig/create-react-app`](https://npmjs.com/package/@tsconfig/create-react-app) |
