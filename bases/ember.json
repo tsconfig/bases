@@ -24,6 +24,13 @@
     // will likely improve over time
     "allowJs": false,
 
+    // Practically, it is *nearly* impossible to have every type-checked
+    // package in your dependency graph to have compatible types.
+    // Good stewards of the ecosystem may opt to set this to false and try to 
+    // fix packages with failures, but for most people, the error information
+    // is inactionable noise.
+    "skipLibCheck": true,
+
     // --- TS for SemVer Types compatibility
     // Strictness settings -- you should *not* change these: Ember code is not
     // guaranteed to type check with these set to looser values.
@@ -76,8 +83,9 @@
 
     // Don't implicitly pull in declarations from `@types` packages unless we
     // actually import from them AND the package in question doesn't bring its
-    // own types. You  may wish to override this e.g. with `"types": ["node"]`
-    // if your project has build-time elements that use NodeJS APIs.
+    // own types. 
+    // 
+    // You  may wish to override this e.g. with `"types": ["ember-source/types"]`
     "types": []
   }
 }
