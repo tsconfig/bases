@@ -27,6 +27,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 19](#node-19-tsconfigjson)                   | [`@tsconfig/node19`](https://npmjs.com/package/@tsconfig/node19)                     |
 | [Node 20](#node-20-tsconfigjson)                   | [`@tsconfig/node20`](https://npmjs.com/package/@tsconfig/node20)                     |
 | [Node 21](#node-21-tsconfigjson)                   | [`@tsconfig/node21`](https://npmjs.com/package/@tsconfig/node21)                     |
+| [Node 22](#node-22-tsconfigjson)                   | [`@tsconfig/node22`](https://npmjs.com/package/@tsconfig/node22)                     |
 | [Nuxt](#nuxt-tsconfigjson)                         | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
 | [React Native](#react-native-tsconfigjson)         | [`@tsconfig/react-native`](https://npmjs.com/package/@tsconfig/react-native)         |
 | [Remix](#remix-tsconfigjson)                       | [`@tsconfig/remix`](https://npmjs.com/package/@tsconfig/remix)                       |
