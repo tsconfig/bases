@@ -155,7 +155,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/next/tsconfig.json"
 ```
-### Node LTS <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
+### Node LTS (22) <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
 
 Install:
 
