@@ -2,7 +2,7 @@
 // Equivalent to a config of: node22
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 22",
+  "display": "Node LTS (22)",
   "_version": "22.11.0",
 
   "compilerOptions": {
