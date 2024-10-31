@@ -36,7 +36,7 @@ const baseMajorVersion = (lts.version.match(versionRegex) || [])[1];
 const base = `node${baseMajorVersion}`;
 const versioned = {
   $schema: "https://json.schemastore.org/tsconfig",
-  display: "Node LTS",
+  display: `Node LTS (${baseMajorVersion})`,
   _version: lts.version.substring(lts.version.indexOf("v") + 1)
 };
 
