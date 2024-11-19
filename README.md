@@ -309,6 +309,20 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node22/tsconfig.json"
 ```
+### Node 23 <kbd><a href="./bases/node23.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node23
+yarn add --dev @tsconfig/node23
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node23/tsconfig.json"
+```
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
 
 Install:
