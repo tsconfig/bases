@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Node with TypeScript",
+    "_version": "23.6.0",
+    "compilerOptions": {
+        "lib": [
+            "es2024"
+        ],
+        "module": "node16",
+        "target": "es2024",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node16",
+        "erasableSyntaxOnly": true
+    }
+}
