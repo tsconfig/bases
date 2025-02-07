@@ -4,12 +4,6 @@
     "docs": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/#the---erasablesyntaxonly-option",
     "_version": "23.6.0",
     "compilerOptions": {
-        "module": "node16",
-        "target": "es2024",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "moduleResolution": "node16",
         "erasableSyntaxOnly": true
     }
 }
