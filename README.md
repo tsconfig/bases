@@ -53,6 +53,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/recommended/tsconfig.json"
 ```
+
 ### Bun <kbd><a href="./bases/bun.json">tsconfig.json</a></kbd>
 
 Install:
@@ -67,6 +68,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/bun/tsconfig.json"
 ```
+
 ### Create React App <kbd><a href="./bases/create-react-app.json">tsconfig.json</a></kbd>
 
 Install:
@@ -81,6 +83,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/create-react-app/tsconfig.json"
 ```
+
 ### Cypress <kbd><a href="./bases/cypress.json">tsconfig.json</a></kbd>
 
 Install:
@@ -95,6 +98,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/cypress/tsconfig.json"
 ```
+
 ### Deno <kbd><a href="./bases/deno.json">tsconfig.json</a></kbd>
 
 Install:
@@ -109,6 +113,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/deno/tsconfig.json"
 ```
+
 ### Docusaurus v2 <kbd><a href="./bases/docusaurus.json">tsconfig.json</a></kbd>
 
 Install:
@@ -124,7 +129,10 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/docusaurus/tsconfig.json"
 ```
 
+
+
 > **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+
 ### Ember <kbd><a href="./bases/ember.json">tsconfig.json</a></kbd>
 
 Install:
@@ -140,7 +148,10 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/ember/tsconfig.json"
 ```
 
+
+
 > **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
 Install:
@@ -155,6 +166,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/next/tsconfig.json"
 ```
+
 ### Node LTS (22) <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
 
 Install:
@@ -169,6 +181,27 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node-lts/tsconfig.json"
 ```
+
+### Node with TypeScript (TS >=5.8 ONLY) <kbd><a href="./bases/node-ts.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node-ts
+yarn add --dev @tsconfig/node-ts
+```
+
+
+> This base require TypeScript 5.8+ (See [announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/#the---erasablesyntaxonly-option))
+
+This file is meant to be used in conjunction with other Node.js configurations, you can do so by extending multiple files in the `extends` clause of your `tsconfig.json`:
+
+```json
+{
+  "extends": ["@tsconfig/node22/tsconfig.json", "@tsconfig/node-ts/tsconfig.json"]
+}
+```
+
 ### Node 10 <kbd><a href="./bases/node10.json">tsconfig.json</a></kbd>
 
 Install:
@@ -183,6 +216,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node10/tsconfig.json"
 ```
+
 ### Node 12 <kbd><a href="./bases/node12.json">tsconfig.json</a></kbd>
 
 Install:
@@ -197,6 +231,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node12/tsconfig.json"
 ```
+
 ### Node 14 <kbd><a href="./bases/node14.json">tsconfig.json</a></kbd>
 
 Install:
@@ -211,6 +246,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node14/tsconfig.json"
 ```
+
 ### Node 16 <kbd><a href="./bases/node16.json">tsconfig.json</a></kbd>
 
 Install:
@@ -225,6 +261,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node16/tsconfig.json"
 ```
+
 ### Node 17 <kbd><a href="./bases/node17.json">tsconfig.json</a></kbd>
 
 Install:
@@ -239,6 +276,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node17/tsconfig.json"
 ```
+
 ### Node 18 <kbd><a href="./bases/node18.json">tsconfig.json</a></kbd>
 
 Install:
@@ -253,6 +291,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node18/tsconfig.json"
 ```
+
 ### Node 19 <kbd><a href="./bases/node19.json">tsconfig.json</a></kbd>
 
 Install:
@@ -267,6 +306,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node19/tsconfig.json"
 ```
+
 ### Node 20 <kbd><a href="./bases/node20.json">tsconfig.json</a></kbd>
 
 Install:
@@ -281,6 +321,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node20/tsconfig.json"
 ```
+
 ### Node 21 <kbd><a href="./bases/node21.json">tsconfig.json</a></kbd>
 
 Install:
@@ -295,6 +336,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node21/tsconfig.json"
 ```
+
 ### Node 22 <kbd><a href="./bases/node22.json">tsconfig.json</a></kbd>
 
 Install:
@@ -309,6 +351,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node22/tsconfig.json"
 ```
+
 ### Node 23 <kbd><a href="./bases/node23.json">tsconfig.json</a></kbd>
 
 Install:
@@ -323,6 +366,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/node23/tsconfig.json"
 ```
+
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
 
 Install:
@@ -338,7 +382,10 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/nuxt/tsconfig.json"
 ```
 
+
+
 > **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+
 ### React Native <kbd><a href="./bases/react-native.json">tsconfig.json</a></kbd>
 
 Install:
@@ -353,6 +400,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/react-native/tsconfig.json"
 ```
+
 ### Remix <kbd><a href="./bases/remix.json">tsconfig.json</a></kbd>
 
 Install:
@@ -368,7 +416,10 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/remix/tsconfig.json"
 ```
 
+
+
 > **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+
 ### Strictest <kbd><a href="./bases/strictest.json">tsconfig.json</a></kbd>
 
 Install:
@@ -383,6 +434,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/strictest/tsconfig.json"
 ```
+
 ### Svelte <kbd><a href="./bases/svelte.json">tsconfig.json</a></kbd>
 
 Install:
@@ -398,7 +450,10 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/svelte/tsconfig.json"
 ```
 
+
+
 > **NOTE**: After `@tsconfig/svelte@2.0.0`, you should add `/// <reference types="svelte" />` to a `d.ts` or a `index.ts`(entry) file to prevent typescript error.
+
 ### Taro <kbd><a href="./bases/taro.json">tsconfig.json</a></kbd>
 
 Install:
@@ -413,6 +468,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/taro/tsconfig.json"
 ```
+
 ### Vite React <kbd><a href="./bases/vite-react.json">tsconfig.json</a></kbd>
 
 Install:
@@ -427,6 +483,7 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/vite-react/tsconfig.json"
 ```
+
 
 <!-- /AUTO -->
 
