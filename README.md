@@ -30,7 +30,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 22](#node-22-tsconfigjson)                   | [`@tsconfig/node22`](https://npmjs.com/package/@tsconfig/node22)                     |
 | [Node 23](#node-23-tsconfigjson)                   | [`@tsconfig/node23`](https://npmjs.com/package/@tsconfig/node23)                     |
 | [Nuxt](#nuxt-tsconfigjson)                         | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
-| [QJSEngine](#qjsengine-tsconfigjson)               | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/qtsengine)                    |
+| [QJSEngine](#qjsengine-tsconfigjson)               | [`@tsconfig/qtsengine`](https://npmjs.com/package/@tsconfig/qtsengine)                    |
 | [React Native](#react-native-tsconfigjson)         | [`@tsconfig/react-native`](https://npmjs.com/package/@tsconfig/react-native)         |
 | [Remix](#remix-tsconfigjson)                       | [`@tsconfig/remix`](https://npmjs.com/package/@tsconfig/remix)                       |
 | [Strictest](#strictest-tsconfigjson)               | [`@tsconfig/strictest`](https://npmjs.com/package/@tsconfig/strictest)               |
