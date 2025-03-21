@@ -32,19 +32,29 @@ npm install --save-dev @tsconfig/${name}
 yarn add --dev @tsconfig/${name}
 \`\`\`
 
-Add to your \`tsconfig.json\`:
+`
+
+  const hasReadmeExtra = await Deno.stat(`./readme-extras/${name}.md`).then(() => true).catch(() => false)
+  const readmeExtra = hasReadmeExtra ? (await Deno.readTextFile(`./readme-extras/${name}.md`)).trim() : ""
+
+  const defaultInstructions = `Add to your \`tsconfig.json\`:
 
 \`\`\`json
 "extends": "@tsconfig/${name}/tsconfig.json"
 \`\`\`
+
 `
 
-  try {
-    const readmeExtra = (await Deno.readTextFile(`./readme-extras/${name}.md`)).trim()
+    if (readmeExtra) {
+      if (!readmeExtra.includes("extends")) {
+        center += defaultInstructions + "\n"
+      }
 
-    if (readmeExtra)
-      center += `\n${readmeExtra}\n`
-  } catch (error) {}
+      center += `\n${readmeExtra}\n\n`
+      
+    } else {
+      center += defaultInstructions 
+    }
 };
 
 const startMarker ="<!-- AUTO -->"
