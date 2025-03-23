@@ -5,7 +5,7 @@
 
   "compilerOptions": {
     "lib": ["es2023"],
-    "module": "node16",
+    "module": "nodenext",
     "target": "es2022",
 
     "strict": true,
