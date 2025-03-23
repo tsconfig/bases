@@ -31,13 +31,14 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 23](#node-23-tsconfigjson)                                     | [`@tsconfig/node23`](https://npmjs.com/package/@tsconfig/node23)                     |
 | [Node with TypeScript](node-with-typescript-ts-58-only-tsconfigjson) | [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
 | [Nuxt](#nuxt-tsconfigjson)                                           | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
-| [QJSEngine](#qjsengine-tsconfigjson)                                 | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/qtsengine)                    |
+| [QJSEngine](#qjsengine-tsconfigjson)                                 | [`@tsconfig/qjsengine`](https://npmjs.com/package/@tsconfig/qtsengine)               |
 | [React Native](#react-native-tsconfigjson)                           | [`@tsconfig/react-native`](https://npmjs.com/package/@tsconfig/react-native)         |
 | [Remix](#remix-tsconfigjson)                                         | [`@tsconfig/remix`](https://npmjs.com/package/@tsconfig/remix)                       |
 | [Strictest](#strictest-tsconfigjson)                                 | [`@tsconfig/strictest`](https://npmjs.com/package/@tsconfig/strictest)               |
 | [Svelte](#svelte-tsconfigjson)                                       | [`@tsconfig/svelte`](https://npmjs.com/package/@tsconfig/svelte)                     |
 | [Taro](#taro-tsconfigjson)                                           | [`@tsconfig/taro`](https://npmjs.com/package/@tsconfig/taro)                         |
 | [Vite React](#vite-react-tsconfigjson)                               | [`@tsconfig/vite-react`](https://npmjs.com/package/@tsconfig/vite-react)             |
+
 
 ### Available TSConfigs
 

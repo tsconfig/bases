@@ -74,12 +74,12 @@
     // without this flag.
     "experimentalDecorators": true,
 
-    // Support generation of source maps. Note: you must *also* enable source
-    // maps in your `ember-cli-babel` config and/or `babel.config.js`.
-    "declaration": true,
-    "declarationMap": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
+    // We don't use TS for compilation, so we can disable these.
+    // Library authors should set declaration and declarationMap to true, however
+    "declaration": false,
+    "declarationMap": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
 
     // Don't implicitly pull in declarations from `@types` packages unless we
     // actually import from them AND the package in question doesn't bring its
