@@ -29,7 +29,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 21](#node-21-tsconfigjson)                                     | [`@tsconfig/node21`](https://npmjs.com/package/@tsconfig/node21)                     |
 | [Node 22](#node-22-tsconfigjson)                                     | [`@tsconfig/node22`](https://npmjs.com/package/@tsconfig/node22)                     |
 | [Node 23](#node-23-tsconfigjson)                                     | [`@tsconfig/node23`](https://npmjs.com/package/@tsconfig/node23)                     |
-| [Node with TypeScript](node-with-typescript-ts-58-only-tsconfigjson) | [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
+| [Node with TypeScript](#node-with-typescript-ts-58-only-tsconfigjson)| [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
 | [Nuxt](#nuxt-tsconfigjson)                                           | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
 | [QJSEngine](#qjsengine-tsconfigjson)                                 | [`@tsconfig/qjsengine`](https://npmjs.com/package/@tsconfig/qtsengine)               |
 | [React Native](#react-native-tsconfigjson)                           | [`@tsconfig/react-native`](https://npmjs.com/package/@tsconfig/react-native)         |
