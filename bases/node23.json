@@ -4,7 +4,7 @@
   "_version": "23.0.0",
 
   "compilerOptions": {
-    "lib": ["es2024"],
+    "lib": ["es2024", "ESNext.Iterator"],
     "module": "nodenext",
     "target": "es2024",
 

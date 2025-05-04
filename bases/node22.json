@@ -4,7 +4,7 @@
   "_version": "22.0.0",
 
   "compilerOptions": {
-    "lib": ["es2023"],
+    "lib": ["es2023", "ESNext.Iterator"],
     "module": "nodenext",
     "target": "es2022",
 
