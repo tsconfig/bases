@@ -29,7 +29,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 21](#node-21-tsconfigjson)                                     | [`@tsconfig/node21`](https://npmjs.com/package/@tsconfig/node21)                     |
 | [Node 22](#node-22-tsconfigjson)                                     | [`@tsconfig/node22`](https://npmjs.com/package/@tsconfig/node22)                     |
 | [Node 23](#node-23-tsconfigjson)                                     | [`@tsconfig/node23`](https://npmjs.com/package/@tsconfig/node23)                     |
-| [Node with TypeScript](node-with-typescript-ts-58-only-tsconfigjson) | [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
+| [Node with TypeScript](#node-with-typescript-ts-58-only-tsconfigjson)| [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
 | [Nuxt](#nuxt-tsconfigjson)                                           | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
 | [QJSEngine](#qjsengine-tsconfigjson)                                 | [`@tsconfig/qjsengine`](https://npmjs.com/package/@tsconfig/qtsengine)               |
 | [React Native](#react-native-tsconfigjson)                           | [`@tsconfig/react-native`](https://npmjs.com/package/@tsconfig/react-native)         |
@@ -371,6 +371,21 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/node23/tsconfig.json"
 ```
 
+### Node 24 <kbd><a href="./bases/node24.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node24
+yarn add --dev @tsconfig/node24
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node24/tsconfig.json"
+```
+
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
 
 Install:
@@ -512,7 +527,7 @@ Because of previous limitations in the config extension system of TypeScript,
 this repo used to provide combined configs from a few common bases (like Node + ESM,
 Node + Strictest and so on).
 
-This issue is now moot since TypeScript v5.0.0, which provides the [ability to 
+This issue is now moot since TypeScript v5.0.0, which provides the [ability to
 extend from multiple configs at once](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0-rc/#supporting-multiple-configuration-files-in-extends). For instance, if you want
 to start from a Node 18 + Strictest base config, you can install both
 `@tsconfig/node18` and `@tsconfig/strictest` packages and extend those configs like so:
