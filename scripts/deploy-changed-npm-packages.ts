@@ -21,7 +21,7 @@ for (const dirEntry of Deno.readDirSync("packages")) {
 
   if (upload) {
     const process = Deno.run({
-      cmd: ["npm", "publish", "--access", "public"],
+      cmd: ["npm", "publish", "--provenance", "--access", "public"],
       stdout: "piped",
       cwd: path.join("packages", dirEntry.name),
       env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
