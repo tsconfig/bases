@@ -9,6 +9,9 @@ on:
     - cron: 0 4 * * *
   workflow_dispatch:
 
+permissions:
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
