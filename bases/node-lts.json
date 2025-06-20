@@ -6,9 +6,12 @@
   "_version": "22.0.0",
   "compilerOptions": {
     "lib": [
-      "es2023"
+      "es2024",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator"
     ],
-    "module": "node16",
+    "module": "nodenext",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
