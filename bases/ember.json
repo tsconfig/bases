@@ -3,6 +3,7 @@
   "display": "Ember",
   "docs": "https://guides.emberjs.com/release/typescript/",
   "_version": "3.0.0",
+  "_deprecated": true,  
 
   // This is the base config used by Ember apps and addons. When actually used
   // via Ember CLI (e.g. ember-cli-typescript's blueprint), it additionally has
