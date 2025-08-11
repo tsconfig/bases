@@ -20,6 +20,13 @@ jobs:
       - name: Create packages for TSConfig JSONs
         run: deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 
+      - name: Test
+        working-directory: test/
+        run: |
+          corepack enable
+          pnpm install
+          pnpm test
+
       - name: Update the README
         run: deno run --allow-read --allow-write --allow-net scripts/update-markdown-readme.ts
 
