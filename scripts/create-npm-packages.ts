@@ -1,5 +1,5 @@
-import * as path from "https://deno.land/std/path/mod.ts";
-import stripJsonComments from "https://esm.sh/strip-json-comments";
+import * as path from "jsr:@std/path"
+import stripJsonComments from "npm:strip-json-comments"
 
 for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
