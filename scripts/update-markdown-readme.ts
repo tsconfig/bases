@@ -1,7 +1,7 @@
 // deno run --allow-read --allow-write scripts/update-markdown-readme.ts
 //
-import * as path from "https://deno.land/std/path/mod.ts";
-import stripJsonComments from "https://esm.sh/strip-json-comments";
+import * as path from "jsr:@std/path";
+import stripJsonComments from "npm:strip-json-comments";
 
 const readme = await Deno.readTextFileSync("./README.md")
 let center = ""
