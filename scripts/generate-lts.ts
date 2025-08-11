@@ -1,8 +1,8 @@
 // deno run --allow-read --allow-write --allow-net scripts/generate-lts.ts
 //
 
-import { gt } from "https://deno.land/std@0.192.0/semver/gt.ts";
-import { parse } from "https://deno.land/std@0.192.0/semver/parse.ts";
+import { greaterThan as gt } from "jsr:@std/semver";
+import { parse } from "jsr:@std/semver";
 
 interface NodeReleaseMetadata {
   version: string;
@@ -40,9 +40,9 @@ const versioned = {
   _version: lts.version.substring(lts.version.indexOf("v") + 1)
 };
 
-import * as path from "https://deno.land/std/path/mod.ts";
-import stripJsonComments from "https://esm.sh/strip-json-comments";
-import { deepMerge } from "https://deno.land/std/collections/deep_merge.ts";
+import * as path from "jsr:@std/path";
+import stripJsonComments from "npm:strip-json-comments";
+import { deepMerge } from "jsr:@std/collections";
 
 const packageText = await Deno.readTextFile(path.join(Deno.cwd(), "bases", `${base}.json`));
 

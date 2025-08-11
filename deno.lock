@@ -1,21 +1,40 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/bytes@^1.0.5": "1.0.6",
+    "jsr:@std/collections@^1.1.2": "1.1.2",
     "jsr:@std/internal@^1.0.9": "1.0.10",
+    "jsr:@std/io@~0.225.2": "0.225.2",
     "jsr:@std/path@*": "1.1.1",
     "jsr:@std/path@^1.1.1": "1.1.1",
+    "jsr:@std/semver@^1.0.5": "1.0.5",
     "npm:strip-json-comments@*": "5.0.3",
     "npm:strip-json-comments@^5.0.3": "5.0.3"
   },
   "jsr": {
+    "@std/bytes@1.0.6": {
+      "integrity": "f6ac6adbd8ccd99314045f5703e23af0a68d7f7e58364b47d2c7f408aeb5820a"
+    },
+    "@std/collections@1.1.2": {
+      "integrity": "f1685dd45c3ec27c39d0e8a642ccf810f391ec8a6cb5e7355926e6dacc64c43e"
+    },
     "@std/internal@1.0.10": {
       "integrity": "e3be62ce42cab0e177c27698e5d9800122f67b766a0bea6ca4867886cbde8cf7"
+    },
+    "@std/io@0.225.2": {
+      "integrity": "3c740cd4ee4c082e6cfc86458f47e2ab7cb353dc6234d5e9b1f91a2de5f4d6c7",
+      "dependencies": [
+        "jsr:@std/bytes"
+      ]
     },
     "@std/path@1.1.1": {
       "integrity": "fe00026bd3a7e6a27f73709b83c607798be40e20c81dde655ce34052fd82ec76",
       "dependencies": [
         "jsr:@std/internal"
       ]
+    },
+    "@std/semver@1.0.5": {
+      "integrity": "529f79e83705714c105ad0ba55bec0f9da0f24d2f726b6cc1c15e505cc2c0624"
     }
   },
   "npm": {
@@ -25,7 +44,10 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/collections@^1.1.2",
+      "jsr:@std/io@~0.225.2",
       "jsr:@std/path@^1.1.1",
+      "jsr:@std/semver@^1.0.5",
       "npm:strip-json-comments@^5.0.3"
     ]
   }
