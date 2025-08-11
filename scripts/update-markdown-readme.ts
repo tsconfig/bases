@@ -3,7 +3,7 @@
 import * as path from "jsr:@std/path";
 import stripJsonComments from "npm:strip-json-comments";
 
-const readme = await Deno.readTextFileSync("./README.md");
+const readme = Deno.readTextFileSync("./README.md");
 let center = "";
 
 const paths = [];
@@ -37,9 +37,9 @@ yarn add --dev @tsconfig/${name}
 
 `;
 
-  const hasReadmeExtra = await Deno.stat(`./readme-extras/${name}.md`).then(
-    () => true,
-  ).catch(() => false);
+  const hasReadmeExtra = await Deno.stat(`./readme-extras/${name}.md`)
+    .then(() => true)
+    .catch(() => false);
   const readmeExtra = hasReadmeExtra
     ? (await Deno.readTextFile(`./readme-extras/${name}.md`)).trim()
     : "";
@@ -69,4 +69,4 @@ const endMarker = "<!-- /AUTO -->";
 const end = readme.split(endMarker)[1];
 const newREADME = start + startMarker + "\n" + center + "\n" + endMarker + end;
 
-await Deno.writeTextFileSync("./README.md", newREADME);
+Deno.writeTextFileSync("./README.md", newREADME);
