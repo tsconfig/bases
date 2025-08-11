@@ -9,5 +9,8 @@
     "@std/semver": "jsr:@std/semver@^1.0.5",
     "@std/streams": "jsr:@std/streams@^1.0.10",
     "strip-json-comments": "npm:strip-json-comments@^5.0.3"
+  },
+  "fmt": {
+    "include": ["deno.json", "scripts/"]
   }
 }
