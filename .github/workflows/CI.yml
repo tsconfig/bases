@@ -12,9 +12,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set-up Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       # Build all the packages
       - name: Create packages for TSConfig JSONs
