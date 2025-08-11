@@ -2,12 +2,14 @@
   "version": "5",
   "specifiers": {
     "jsr:@std/bytes@^1.0.5": "1.0.6",
+    "jsr:@std/bytes@^1.0.6": "1.0.6",
     "jsr:@std/collections@^1.1.2": "1.1.2",
     "jsr:@std/internal@^1.0.9": "1.0.10",
     "jsr:@std/io@~0.225.2": "0.225.2",
     "jsr:@std/path@*": "1.1.1",
     "jsr:@std/path@^1.1.1": "1.1.1",
     "jsr:@std/semver@^1.0.5": "1.0.5",
+    "jsr:@std/streams@^1.0.10": "1.0.10",
     "npm:strip-json-comments@*": "5.0.3",
     "npm:strip-json-comments@^5.0.3": "5.0.3"
   },
@@ -24,7 +26,7 @@
     "@std/io@0.225.2": {
       "integrity": "3c740cd4ee4c082e6cfc86458f47e2ab7cb353dc6234d5e9b1f91a2de5f4d6c7",
       "dependencies": [
-        "jsr:@std/bytes"
+        "jsr:@std/bytes@^1.0.5"
       ]
     },
     "@std/path@1.1.1": {
@@ -35,6 +37,12 @@
     },
     "@std/semver@1.0.5": {
       "integrity": "529f79e83705714c105ad0ba55bec0f9da0f24d2f726b6cc1c15e505cc2c0624"
+    },
+    "@std/streams@1.0.10": {
+      "integrity": "75c0b1431873cd0d8b3d679015220204d36d3c7420d93b60acfc379eb0dc30af",
+      "dependencies": [
+        "jsr:@std/bytes@^1.0.6"
+      ]
     }
   },
   "npm": {
@@ -48,6 +56,7 @@
       "jsr:@std/io@~0.225.2",
       "jsr:@std/path@^1.1.1",
       "jsr:@std/semver@^1.0.5",
+      "jsr:@std/streams@^1.0.10",
       "npm:strip-json-comments@^5.0.3"
     ]
   }
