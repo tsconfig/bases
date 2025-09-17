@@ -36,6 +36,19 @@ for (const dirEntry of Deno.readDirSync("packages")) {
 }
 
 if (uploaded.length) {
+  // If there's any uploads, we need to update the combined package too
+    const process = Deno.run({
+      cmd: ["npm", "publish", "--provenance", "--access", "public"],
+      stdout: "piped",
+      cwd: path.join("packages", "bases"),
+      env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
+    });
+
+    for await (const line of bufio.readLines(process.stdout!)) {
+      console.warn(line);
+    }
+
+
   console.log("Uploaded: ", uploaded.join(", "))
 } else {
   console.log("No uploads")
