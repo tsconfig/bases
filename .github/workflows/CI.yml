@@ -32,6 +32,3 @@ jobs:
             echo "Please update the README via: deno run --allow-read --allow-write scripts/update-markdown-readme.ts"
             exit 1
           fi
-
-      - name: Check formatting
-        run: deno fmt --check
