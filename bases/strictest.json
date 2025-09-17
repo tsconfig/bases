@@ -13,6 +13,7 @@
     "noUnusedParameters": true,
 
     "isolatedModules": true,
+    "verbatimModuleSyntax": true,
 
     "checkJs": true,
 
