@@ -1,3 +1,4 @@
 *.log
 packages/
 .idea/
+node_modules
