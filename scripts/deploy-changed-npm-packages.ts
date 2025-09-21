@@ -5,6 +5,8 @@ import * as bufio from "https://deno.land/std@0.164.0/io/buffer.ts";
 const uploaded = []
 
 for (const dirEntry of Deno.readDirSync("packages")) {
+  if (dirEntry.name === 'bases') continue // @tsconfig/bases package is special, it doesn't have a single tsconfig entry, it will be deployed separately
+
   const localTsconfigPath = path.join("packages", dirEntry.name, "tsconfig.json");
   const newTSConfig = Deno.readTextFileSync(localTsconfigPath);
 
