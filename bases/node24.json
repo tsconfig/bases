@@ -15,7 +15,6 @@
     "target": "es2024",
 
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16"
   }

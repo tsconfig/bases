@@ -9,7 +9,6 @@
     "target": "es2022",
 
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16"
   }

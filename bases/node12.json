@@ -9,7 +9,6 @@
     "target": "es2019",
 
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16"
   }
