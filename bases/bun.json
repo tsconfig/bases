@@ -1,8 +1,8 @@
 {
-  // This is based on https://bun.sh/docs/typescript#suggested-compileroptions
+  // This is based on https://bun.com/docs/typescript#suggested-compileroptions
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Bun",
-  "docs": "https://bun.sh/docs/typescript",
+  "docs": "https://bun.com/docs/typescript",
 
   "compilerOptions": {
     // Environment setup & latest features
