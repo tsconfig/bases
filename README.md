@@ -39,6 +39,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Svelte](#svelte-tsconfigjson)                                       | [`@tsconfig/svelte`](https://npmjs.com/package/@tsconfig/svelte)                     |
 | [Taro](#taro-tsconfigjson)                                           | [`@tsconfig/taro`](https://npmjs.com/package/@tsconfig/taro)                         |
 | [Vite React](#vite-react-tsconfigjson)                               | [`@tsconfig/vite-react`](https://npmjs.com/package/@tsconfig/vite-react)             |
+| [Bases](#bases-tsconfigjson)                               | [`@tsconfig/bases`](https://npmjs.com/package/@tsconfig/bases)             |
 
 
 ### Available TSConfigs
@@ -521,6 +522,22 @@ Add to your `tsconfig.json`:
 
 
 <!-- /AUTO -->
+
+### Bases tsconfig.json
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/bases
+yarn add --dev @tsconfig/bases
+```
+
+Add to your `tsconfig.json`:
+
+```json
+// "extends": "@tsconfig/bases/<base>"
+"extends": "@tsconfig/bases/node-lts"
+```
 
 ### What about combined configs?
 
