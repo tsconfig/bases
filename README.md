@@ -547,13 +547,14 @@ Node + Strictest and so on).
 
 This issue is now moot since TypeScript v5.0.0, which provides the [ability to
 extend from multiple configs at once](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0-rc/#supporting-multiple-configuration-files-in-extends). For instance, if you want
-to start from a Node 18 + Strictest base config, you can install both
-`@tsconfig/node18` and `@tsconfig/strictest` packages and extend those configs like so:
+to start from a Node 18 + Strictest base config, you can install [@tsconfig/bases](#bases-tsconfigjson) (or both
+`@tsconfig/node18` and `@tsconfig/strictest`) package and extend those configs like so:
 
 ```jsonc
 // tsconfig.json
 {
-  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"]
+  "extends": ["@tsconfig/bases/strictest", "@tsconfig/bases/node18"]
+  // or "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig"]
 }
 ```
 
