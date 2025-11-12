@@ -1,6 +1,6 @@
 {
 	// https://doc.qt.io/qt-5/qjsengine.html
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "QJSEngine",
 
   "compilerOptions": {

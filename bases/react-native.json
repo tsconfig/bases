@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "React Native",
   "_version": "3.0.2",
   "compilerOptions": {

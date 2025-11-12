@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Vite React",
   "_version": "7.0.0",
 

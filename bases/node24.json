@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Node 24",
   "_version": "24.0.0",
 

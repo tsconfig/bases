@@ -1,6 +1,6 @@
 {
   // This is based on https://bun.com/docs/typescript#suggested-compileroptions
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Bun",
   "docs": "https://bun.com/docs/typescript",
 
