@@ -8,5 +8,5 @@
     "skipLibCheck": true
   },
   "display": "Recommended",
-  "$schema": "https://json.schemastore.org/tsconfig"
+  "$schema": "https://www.schemastore.org/tsconfig"
 }

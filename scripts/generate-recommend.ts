@@ -16,7 +16,7 @@ const parsed = JSON.parse(stripJsonComments(packageText));
 
 // `display` field will be dropped at generating npm package, so prevent the order from being last in the JSON file
 parsed.display = "Recommended";
-parsed["$schema"] = "https://json.schemastore.org/tsconfig";
+parsed["$schema"] = "https://www.schemastore.org/tsconfig";
 
 const result = JSON.stringify(parsed, null, "  ");
 

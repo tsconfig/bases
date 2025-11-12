@@ -17,7 +17,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Strictest",
   "_version": "2.0.0"
 }
