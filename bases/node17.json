@@ -8,6 +8,7 @@
     "target": "es2022",
 
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "useDefineForClassFields": true,
     "moduleResolution": "node16"
