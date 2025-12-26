@@ -1,4 +1,7 @@
 {
+  "$schema": "https://www.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "_version": "2.0.0",
   "compilerOptions": {
     "module": "nodenext",
     "target": "esnext",
@@ -15,7 +18,5 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true
-  },
-  "display": "Recommended",
-  "$schema": "https://www.schemastore.org/tsconfig"
+  }
 }
