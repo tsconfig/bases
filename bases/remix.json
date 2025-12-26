@@ -2,9 +2,12 @@
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Remix",
   "_version": "2.0.0",
-
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "es2019"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2019"
+    ],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
@@ -16,9 +19,10 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": [
+        "./app/*"
+      ]
     },
-
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
   }

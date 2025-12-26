@@ -12,10 +12,10 @@ Add to your `tsconfig.json`:
 ```json
 "extends": "@tsconfig/[filename]/tsconfig.json"
 ```
-[readme-extra]
----
 
-The `tsconfig.json`: 
+## [readme-extra]
+
+The `tsconfig.json`:
 
 ```jsonc
 [tsconfig]

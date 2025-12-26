@@ -1,15 +1,16 @@
 {
-	// https://doc.qt.io/qt-5/qjsengine.html
+  // https://doc.qt.io/qt-5/qjsengine.html
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "QJSEngine",
-
   "compilerOptions": {
     // Technically QTJSEngine supportes ES2016, however there are issues with
     // arrow functions where in certain contexts "this" does not exist.
     // Targeting ES5 instead fixes these issues by binding this to a variable
     // and closing over that instead.
     "target": "ES5",
-    "lib": ["ES2016"],
+    "lib": [
+      "ES2016"
+    ],
     "module": "none",
     "esModuleInterop": false,
     "strict": true
