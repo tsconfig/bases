@@ -1,3 +1,4 @@
+import { deepMerge } from "@std/collections";
 import { parse as parseJsonc } from "@std/jsonc";
 import * as path from "@std/path";
 
@@ -30,11 +31,17 @@ const packageText = await Deno.readTextFile(
 );
 const parsed = parseJsonc(packageText) as Record<string, unknown>;
 
-// `display` field will be dropped at generating npm package, so prevent the order from being last in the JSON file
-parsed.display = "Recommended";
-parsed.$schema = "https://www.schemastore.org/tsconfig";
+const versioned = {
+  $schema: "https://www.schemastore.org/tsconfig",
+  display: "Recommended",
+  _version: "2.0.0",
+};
 
-const result = JSON.stringify(parsed, null, 2);
+// This is to get the _version property to show up directly under the display property
+const parsedAndOrdered = deepMerge(versioned, parsed);
+parsedAndOrdered.display = versioned.display;
+
+const result = JSON.stringify(parsedAndOrdered, null, 2);
 
 const npmResponse = await fetch(
   `https://unpkg.com/@tsconfig/svelte/tsconfig.json`,
