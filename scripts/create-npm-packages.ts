@@ -5,7 +5,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue;
 
   const tsconfigFilePath = path.join("bases", tsconfigEntry.name);
-  const name = path.basename(tsconfigEntry.name).replace(".json", "");
+  const { name } = path.parse(tsconfigEntry.name);
 
   // Make the folder
   const packagePath = path.join("packages", name);
@@ -172,7 +172,7 @@ async function buildTsconfigBases() {
     if (!tsconfigEntry.isFile) continue;
 
     // remove extension
-    const name = tsconfigEntry.name.replace(/\.json$/, "");
+    const { name } = path.parse(tsconfigEntry.name);
 
     const finalTsconfigFile = `${name}.tsconfig.json`;
 

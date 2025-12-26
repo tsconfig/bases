@@ -16,11 +16,11 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
 const sortedPaths = paths
   .sort((l, r) => l.localeCompare(r))
   .filter((r) => !r.includes("recommended"));
-const basePaths = ["recommended.json", ...sortedPaths];
+const basePaths = ["recommended.jsonc", ...sortedPaths];
 for (const base of basePaths) {
-  if (base === "esm.json") continue;
+  if (base === "esm.jsonc") continue;
   const tsconfigFilePath = path.join("bases", base);
-  const name = path.basename(base).replace(".json", "");
+  const { name } = path.parse(base);
 
   const tsconfigText = await Deno.readTextFile(tsconfigFilePath);
   const tsconfigJSON = parseJsonc(tsconfigText) as { display: string };

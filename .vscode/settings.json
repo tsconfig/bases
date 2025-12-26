@@ -7,8 +7,5 @@
   },
   "cSpell.words": [
     "Deno"
-  ],
-  "files.associations": {
-    "*.json": "jsonc"
-  }
+  ]
 }

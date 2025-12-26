@@ -49,5 +49,5 @@ const npmResponse = await fetch(
 const npmPackage = await npmResponse.text();
 
 if (npmPackage !== result) {
-  await Deno.writeTextFile("bases/recommended.json", `${result}\n`);
+  await Deno.writeTextFile("bases/recommended.jsonc", `${result}\n`);
 }
