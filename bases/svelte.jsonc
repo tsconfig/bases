@@ -2,7 +2,6 @@
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Svelte",
   "_version": "5.0.0",
-
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -17,7 +16,6 @@
       enable source maps by default.
      */
     "sourceMap": true,
-
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true

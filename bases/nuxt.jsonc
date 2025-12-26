@@ -2,7 +2,6 @@
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Nuxt",
   "_version": "2.0.0",
-  
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -17,7 +16,6 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": {
       "~/*": [
         "./*"
@@ -33,7 +31,7 @@
   },
   "exclude": [
     "node_modules",
-    ".nuxt", 
+    ".nuxt",
     "dist"
   ]
 }

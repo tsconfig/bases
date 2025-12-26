@@ -1,57 +1,78 @@
-import * as path from "https://deno.land/std@0.164.0/path/mod.ts";
-import * as bufio from "https://deno.land/std@0.164.0/io/buffer.ts";
+import * as path from "@std/path";
 
 // Loop through generated packages, deploying versions for anything which has a different tsconfig
-const uploaded = []
+const uploaded = [];
 
-for (const dirEntry of Deno.readDirSync("packages")) {
-  if (dirEntry.name === 'bases') continue // @tsconfig/bases package is special, it doesn't have a single tsconfig entry, it will be deployed separately
+for await (const dirEntry of Deno.readDir("packages")) {
+  if (dirEntry.name === "bases") continue; // @tsconfig/bases package is special, it doesn't have a single tsconfig entry, it will be deployed separately
 
-  const localTsconfigPath = path.join("packages", dirEntry.name, "tsconfig.json");
-  const newTSConfig = Deno.readTextFileSync(localTsconfigPath);
+  const localTsconfigPath = path.join(
+    "packages",
+    dirEntry.name,
+    "tsconfig.json",
+  );
+  const newTSConfig = await Deno.readTextFile(localTsconfigPath);
 
   let upload = false;
   try {
-    const unpkgURL = `https://unpkg.com/@tsconfig/${dirEntry.name}/tsconfig.json`;
+    const unpkgURL =
+      `https://unpkg.com/@tsconfig/${dirEntry.name}/tsconfig.json`;
     const currentJSONReq = await fetch(unpkgURL);
     const currentJSONTxt = await currentJSONReq.text();
     upload = currentJSONTxt !== newTSConfig;
-  } catch (error) {
+  } catch (_error) {
     // Not here, definitely needs to be uploaded
     upload = true;
   }
 
   if (upload) {
-    const process = Deno.run({
-      cmd: ["npm", "publish", "--provenance", "--access", "public"],
+    const token = Deno.env.get("NODE_AUTH_TOKEN");
+    if (!token) throw new Error("NODE_AUTH_TOKEN is required");
+
+    const cmd = new Deno.Command("npm", {
+      args: ["publish", "--provenance", "--access", "public"],
       stdout: "piped",
+      stderr: "piped",
       cwd: path.join("packages", dirEntry.name),
-      env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
+      env: { NODE_AUTH_TOKEN: token },
     });
 
-    for await (const line of bufio.readLines(process.stdout!)) {
-      console.warn(line);
+    const output = await cmd.output();
+    const stdoutText = new TextDecoder().decode(output.stdout);
+    const stderrText = new TextDecoder().decode(output.stderr);
+    if (stdoutText.trim()) console.warn(stdoutText.trimEnd());
+    if (stderrText.trim()) console.warn(stderrText.trimEnd());
+    if (!output.success) {
+      throw new Error(`npm publish failed for ${dirEntry.name}`);
     }
 
-    uploaded.push(dirEntry.name)
+    uploaded.push(dirEntry.name);
   }
 }
 
 if (uploaded.length) {
   // If there's any uploads, we need to update the combined package too
-    const process = Deno.run({
-      cmd: ["npm", "publish", "--provenance", "--access", "public"],
-      stdout: "piped",
-      cwd: path.join("packages", "bases"),
-      env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
-    });
+  const token = Deno.env.get("NODE_AUTH_TOKEN");
+  if (!token) throw new Error("NODE_AUTH_TOKEN is required");
 
-    for await (const line of bufio.readLines(process.stdout!)) {
-      console.warn(line);
-    }
+  const cmd = new Deno.Command("npm", {
+    args: ["publish", "--provenance", "--access", "public"],
+    stdout: "piped",
+    stderr: "piped",
+    cwd: path.join("packages", "bases"),
+    env: { NODE_AUTH_TOKEN: token },
+  });
 
+  const output = await cmd.output();
+  const stdoutText = new TextDecoder().decode(output.stdout);
+  const stderrText = new TextDecoder().decode(output.stderr);
+  if (stdoutText.trim()) console.warn(stdoutText.trimEnd());
+  if (stderrText.trim()) console.warn(stderrText.trimEnd());
+  if (!output.success) {
+    throw new Error("npm publish failed for bases");
+  }
 
-  console.log("Uploaded: ", uploaded.join(", "))
+  console.log("Uploaded: ", uploaded.join(", "));
 } else {
-  console.log("No uploads")
+  console.log("No uploads");
 }

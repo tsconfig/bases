@@ -1,7 +1,11 @@
 {
-  "cSpell.words": ["Deno"],
-  "deno.enable": true,
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "cSpell.words": [
+    "Deno"
+  ]
 }

@@ -1,16 +1,16 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig",
-  "display": "Node 17",
-  "_version": "17.1.0",
+  "display": "Node 18",
+  "_version": "18.2.0",
   "compilerOptions": {
-    "lib": ["es2022"],
+    "lib": [
+      "es2023"
+    ],
     "module": "node16",
     "target": "es2022",
-
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "useDefineForClassFields": true,
     "moduleResolution": "node16"
   }
 }

@@ -1,10 +1,8 @@
 {
   // This is based on https://deno.land/manual/getting_started/typescript#custom-typescript-compiler-options
   // then the defaults are removed.
-
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Deno",
-
   "compilerOptions": {
     "jsx": "react",
     "lib": [],

@@ -1,12 +1,12 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Node 10",
-
   "compilerOptions": {
-    "lib": ["es2018"],
+    "lib": [
+      "es2018"
+    ],
     "module": "commonjs",
     "target": "es2018",
-
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

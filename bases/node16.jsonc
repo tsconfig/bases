@@ -1,13 +1,13 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig",
-  "display": "Node 14",
-  "_version": "14.1.0",
-
+  "display": "Node 16",
+  "_version": "16.1.0",
   "compilerOptions": {
-    "lib": ["es2020"],
+    "lib": [
+      "es2021"
+    ],
     "module": "node16",
-    "target": "es2020",
-
+    "target": "es2021",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

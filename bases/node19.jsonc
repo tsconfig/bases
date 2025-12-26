@@ -1,13 +1,13 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig",
-  "display": "Node 16",
-  "_version": "16.1.0",
-
+  "display": "Node 19",
+  "_version": "19.1.0",
   "compilerOptions": {
-    "lib": ["es2021"],
+    "lib": [
+      "es2023"
+    ],
     "module": "node16",
-    "target": "es2021",
-
+    "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
