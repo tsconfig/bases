@@ -137,7 +137,7 @@ Add to your `tsconfig.json`:
 
 
 
-> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+> **NOTE**: TypeScript 7 removes `baseUrl`. If you previously added `"baseUrl": "."` for module resolution, use `paths` instead (for example: `"paths": { "*": ["./*"] }`).
 
 ### Ember <kbd><a href="./bases/ember.json">tsconfig.json</a></kbd>
 
@@ -156,7 +156,7 @@ Add to your `tsconfig.json`:
 
 
 
-> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+> **NOTE**: TypeScript 7 removes `baseUrl`. If you previously added `"baseUrl": "."` for module resolution, use `paths` instead (for example: `"paths": { "*": ["./*"] }`).
 
 ### Next.js <kbd><a href="./bases/next.json">tsconfig.json</a></kbd>
 
@@ -405,7 +405,7 @@ Add to your `tsconfig.json`:
 
 
 
-> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+> **NOTE**: TypeScript 7 removes `baseUrl`. If you previously added `"baseUrl": "."` for module resolution, use `paths` instead (for example: `"paths": { "*": ["./*"] }`).
 
 ### QJSEngine <kbd><a href="./bases/qjsengine.json">tsconfig.json</a></kbd>
 
@@ -454,7 +454,7 @@ Add to your `tsconfig.json`:
 
 
 
-> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+> **NOTE**: TypeScript 7 removes `baseUrl`. If you previously added `"baseUrl": "."` for module resolution, use `paths` instead (for example: `"paths": { "*": ["./*"] }`).
 
 ### Strictest <kbd><a href="./bases/strictest.json">tsconfig.json</a></kbd>
 
