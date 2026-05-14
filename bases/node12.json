@@ -7,6 +7,7 @@
     "lib": ["es2019", "es2020.promise", "es2020.bigint", "es2020.string"],
     "module": "node16",
     "target": "es2019",
+    "types": ["node"],
 
     "strict": true,
     "esModuleInterop": true,

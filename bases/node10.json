@@ -6,6 +6,7 @@
     "lib": ["es2018"],
     "module": "commonjs",
     "target": "es2018",
+    "types": ["node"],
 
     "strict": true,
     "esModuleInterop": true,

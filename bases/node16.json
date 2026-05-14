@@ -7,6 +7,7 @@
     "lib": ["es2021"],
     "module": "node16",
     "target": "es2021",
+    "types": ["node"],
 
     "strict": true,
     "esModuleInterop": true,
