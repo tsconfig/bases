@@ -1,10 +1,10 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig",
   "display": "Node 26",
-  "_version": "26.0.0",
+  "_version": "26.1.0",
 
   "compilerOptions": {
-    "lib": ["es2025", "ESNext.Collection", "ESNext.Temporal"],
+    "lib": ["es2025", "ESNext.Collection", "ESNext.Temporal", "ESNext.Intl"],
     "module": "nodenext",
     "target": "es2025",
 
