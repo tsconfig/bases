@@ -4,7 +4,7 @@
   "_version": "26.1.0",
 
   "compilerOptions": {
-    "lib": ["es2025", "ESNext.Collection", "ESNext.Temporal", "ESNext.Intl"],
+    "lib": ["es2025", "ESNext.Collection", "ESNext.Temporal", "ESNext.Intl", "ESNext.Date"],
     "module": "nodenext",
     "target": "es2025",
 
