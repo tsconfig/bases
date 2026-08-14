@@ -7,6 +7,7 @@
     "lib": ["es2025", "ESNext.Collection", "ESNext.Temporal"],
     "module": "nodenext",
     "target": "es2025",
+    "types": ["node"],
 
     "esModuleInterop": true,
     "skipLibCheck": true
