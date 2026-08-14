@@ -3,9 +3,8 @@
   "scripts": {
     "test": "tsc --noEmit"
   },
-  "packageManager": "pnpm@10.12.4",
   "devDependencies": {
-    "@tsconfig/bases": "link:../packages/bases",
+    "@tsconfig/bases": "file:../packages/bases",
     "@types/node": "^24.2.1",
     "typescript": "^5.9.2"
   }

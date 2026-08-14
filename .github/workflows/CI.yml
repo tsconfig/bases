@@ -9,23 +9,25 @@ jobs:
 
     steps:
       - name: Checkout tree
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
+
+      - name: Set-up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
 
       - name: Set-up Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
+        uses: denoland/setup-deno@v2
 
       # Build all the packages
       - name: Create packages for TSConfig JSONs
         run: deno run --allow-read --allow-write --allow-net scripts/create-npm-packages.ts
 
       - name: Test
-        working-directory: test/
+        working-directory: test
         run: |
-          corepack enable
-          pnpm install
-          pnpm test
+          npm install
+          npm run test
 
       - name: Update the README
         run: deno run --allow-read --allow-write --allow-net scripts/update-markdown-readme.ts

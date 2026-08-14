@@ -1,1 +1,1 @@
-> **NOTE**: You may need to add `"baseUrl": "."` to your `tsconfig.json` to support proper file resolution.
+> **NOTE**: TypeScript 7 removes `baseUrl`. If you previously added `"baseUrl": "."` for module resolution, use `paths` instead (for example: `"paths": { "*": ["./*"] }`).

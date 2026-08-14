@@ -1,8 +1,7 @@
 // deno run --allow-read --allow-write --allow-net scripts/generate-lts.ts
 //
 
-import { gt } from "https://deno.land/std@0.192.0/semver/gt.ts";
-import { parse } from "https://deno.land/std@0.192.0/semver/parse.ts";
+import { greaterThan, parse } from "@std/semver";
 
 interface NodeReleaseMetadata {
   version: string;
@@ -18,7 +17,7 @@ interface NodeReleaseMetadata {
   security: boolean;
 }
 
-type Tsconfig = Record<string, any>;
+type Tsconfig = Record<string, unknown>;
 
 const versionRegex = /v(\d+)\.(\d+)\.(\d+)/;
 
@@ -27,7 +26,7 @@ const releasesJson = (await releasesResponse.json()) as NodeReleaseMetadata[];
 const lts = releasesJson
   .filter((r) => r.lts)
   .reduce(
-    (prevValue, currValue) => (gt(parse(currValue.version), parse(prevValue.version)) ? currValue : prevValue),
+    (prevValue, currValue) => (greaterThan(parse(currValue.version), parse(prevValue.version)) ? currValue : prevValue),
     {
       version: "v0.0.0"
     }
@@ -40,13 +39,13 @@ const versioned = {
   _version: lts.version.substring(lts.version.indexOf("v") + 1)
 };
 
-import * as path from "https://deno.land/std/path/mod.ts";
-import stripJsonComments from "https://esm.sh/strip-json-comments";
-import { deepMerge } from "https://deno.land/std/collections/deep_merge.ts";
+import * as path from "@std/path";
+import { parse as parseJsonc } from "@std/jsonc";
+import { deepMerge } from "@std/collections";
 
 const packageText = await Deno.readTextFile(path.join(Deno.cwd(), "bases", `${base}.json`));
 
-const parsed = JSON.parse(stripJsonComments(packageText)) as Tsconfig;
+const parsed = parseJsonc(packageText) as Tsconfig;
 
 // This is to get the _version property to show up directly under the display property
 const parsedAndOrdered = deepMerge(versioned, parsed);
