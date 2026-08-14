@@ -30,6 +30,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Node 22](#node-22-tsconfigjson)                                     | [`@tsconfig/node22`](https://npmjs.com/package/@tsconfig/node22)                     |
 | [Node 23](#node-23-tsconfigjson)                                     | [`@tsconfig/node23`](https://npmjs.com/package/@tsconfig/node23)                     |
 | [Node 24](#node-24-tsconfigjson)                                     | [`@tsconfig/node24`](https://npmjs.com/package/@tsconfig/node24)                     |
+| [Node 26](#node-26-tsconfigjson)                                     | [`@tsconfig/node26`](https://npmjs.com/package/@tsconfig/node26)                     |
 | [Node with TypeScript](#node-with-typescript-ts-58-only-tsconfigjson)| [`@tsconfig/node-ts`](https://npmjs.com/package/@tsconfig/node-ts)                   |
 | [Nuxt](#nuxt-tsconfigjson)                                           | [`@tsconfig/nuxt`](https://npmjs.com/package/@tsconfig/nuxt)                         |
 | [QJSEngine](#qjsengine-tsconfigjson)                                 | [`@tsconfig/qjsengine`](https://npmjs.com/package/@tsconfig/qtsengine)               |
@@ -386,6 +387,21 @@ Add to your `tsconfig.json`:
 
 ```json
 "extends": "@tsconfig/node24/tsconfig.json"
+```
+
+### Node 26 <kbd><a href="./bases/node26.json">tsconfig.json</a></kbd>
+
+Install:
+
+```sh
+npm install --save-dev @tsconfig/node26
+yarn add --dev @tsconfig/node26
+```
+
+Add to your `tsconfig.json`:
+
+```json
+"extends": "@tsconfig/node26/tsconfig.json"
 ```
 
 ### Nuxt <kbd><a href="./bases/nuxt.json">tsconfig.json</a></kbd>
