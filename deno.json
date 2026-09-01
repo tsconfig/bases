@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@std/collections": "jsr:@std/collections",
+    "@std/jsonc": "jsr:@std/jsonc",
+    "@std/path": "jsr:@std/path",
+    "@std/semver": "jsr:@std/semver"
+  }
+}

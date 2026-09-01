@@ -1,5 +1,5 @@
-import * as path from "https://deno.land/std/path/mod.ts";
-import stripJsonComments from "https://esm.sh/strip-json-comments";
+import { parse as parseJsonc } from "@std/jsonc";
+import * as path from "@std/path";
 
 for await (const tsconfigEntry of Deno.readDir("bases")) {
   if (!tsconfigEntry.isFile) continue
@@ -9,7 +9,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
 
   // Make the folder
   const packagePath = path.join("packages", name)
-  Deno.mkdirSync(packagePath, { recursive: true })
+  await Deno.mkdir(packagePath, { recursive: true })
 
   // Copy over the template files
   const templateDir = "./template"
@@ -17,15 +17,15 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
     if (!templateFile.isFile) continue
     if (templateFile.name === "README-combined.md") continue // README-combined.md is only for the combined bases
     const templatedFile = path.join(templateDir, templateFile.name)
-    Deno.copyFileSync(templatedFile, path.join(packagePath, templateFile.name))
+    await Deno.copyFile(templatedFile, path.join(packagePath, templateFile.name))
   }
-  
+
   // Copy the create a tsconfig.json from the base json
   const newPackageTSConfigPath = path.join(packagePath, "tsconfig.json")
-  Deno.copyFileSync(tsconfigFilePath, newPackageTSConfigPath)
-  
+  await Deno.copyFile(tsconfigFilePath, newPackageTSConfigPath)
+
   const tsconfigText = await Deno.readTextFile(newPackageTSConfigPath)
-  const tsconfigJSON = JSON.parse(stripJsonComments(tsconfigText))
+  const tsconfigJSON = parseJsonc(tsconfigText) as { display: string; _version?: string }
 
 // Drop `display` field in tsconfig.json for npm package 
   await Deno.writeTextFile(newPackageTSConfigPath, tsconfigText.replace(/\s*"display.*/,''))
@@ -48,7 +48,7 @@ for await (const tsconfigEntry of Deno.readDir("bases")) {
     let packageText = await Deno.readTextFile(fileToEdit)
     packageText = packageText.replace(/\[filename\]/g, name)
                              .replace(/\[display_title\]/g, title)
-                             .replace(/\[tsconfig\]/g, Deno.readTextFileSync(newPackageTSConfigPath))
+                             .replace(/\[tsconfig\]/g, await Deno.readTextFile(newPackageTSConfigPath))
     
     // Inject readme-extra if any
     try {
@@ -111,7 +111,7 @@ async function buildTsconfigBases() {
 
   // Make the folder
   const packagePath = path.join("packages", name)
-  Deno.mkdirSync(packagePath, { recursive: true })
+  await Deno.mkdir(packagePath, { recursive: true })
 
   // Copy over the template files
   const templateDir = "./template"
@@ -119,7 +119,7 @@ async function buildTsconfigBases() {
     if (!templateFile.isFile) continue
     if (templateFile.name === "README.md") continue
     const templatedFile = path.join(templateDir, templateFile.name)
-    Deno.copyFileSync(
+    await Deno.copyFile(
       templatedFile,
       path.join(
         packagePath,
@@ -146,7 +146,7 @@ async function buildTsconfigBases() {
 
     const newPackageTSConfigPath = path.join(packagePath, finalTsconfigFile)
 
-    Deno.copyFileSync(tsconfigFilePath, newPackageTSConfigPath)
+    await Deno.copyFile(tsconfigFilePath, newPackageTSConfigPath)
 
     const tsconfigText = await Deno.readTextFile(newPackageTSConfigPath)
 
