@@ -8,9 +8,10 @@
     "lib": [
       "es2024",
       "ESNext.Array",
-      "ESNext.Collection",
-      "ESNext.Iterator",
-      "ESNext.Promise"
+      "ES2025.Collection",
+      "ESNext.Error",
+      "ES2025.Iterator",
+      "ES2025.Promise"
     ],
     "module": "nodenext",
     "target": "es2024",
