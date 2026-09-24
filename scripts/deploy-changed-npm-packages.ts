@@ -26,7 +26,6 @@ for (const dirEntry of Deno.readDirSync("packages")) {
       cmd: ["npm", "publish", "--provenance", "--access", "public"],
       stdout: "piped",
       cwd: path.join("packages", dirEntry.name),
-      env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
     });
 
     for await (const line of bufio.readLines(process.stdout!)) {
@@ -43,7 +42,6 @@ if (uploaded.length) {
       cmd: ["npm", "publish", "--provenance", "--access", "public"],
       stdout: "piped",
       cwd: path.join("packages", "bases"),
-      env: { NODE_AUTH_TOKEN: Deno.env.get("NODE_AUTH_TOKEN")! },
     });
 
     for await (const line of bufio.readLines(process.stdout!)) {
