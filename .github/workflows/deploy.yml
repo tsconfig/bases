@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  contents: read
   id-token: write
 
 jobs:
@@ -21,9 +22,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set-up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 24
           registry-url: https://registry.npmjs.org
 
       - name: Set-up Deno
@@ -37,7 +38,4 @@ jobs:
 
       # Deploy anything which differs from the npm version of a tsconfig
       - name: "Deploy built packages to NPM"
-        run: |
-          deno run --allow-read --allow-run --allow-env --allow-net scripts/deploy-changed-npm-packages.ts
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+        run: deno run --allow-read --allow-run --allow-net scripts/deploy-changed-npm-packages.ts
