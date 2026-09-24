@@ -4,7 +4,7 @@
   "_version": "23.0.0",
 
   "compilerOptions": {
-    "lib": ["es2024", "ESNext.Array", "ESNext.Collection", "ESNext.Iterator", "ESNext.Promise"],
+    "lib": ["es2024", "ESNext.Array", "ES2025.Collection", "ES2025.Iterator", "ES2025.Promise"],
     "module": "nodenext",
     "target": "es2024",
     "types": ["node"],
