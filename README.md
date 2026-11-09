@@ -17,7 +17,7 @@ We target the latest stable version of TypeScript, note that because we want to 
 | [Docusaurus v2](#docusaurus-v2-tsconfigjson)                         | [`@tsconfig/docusaurus`](https://npmjs.com/package/@tsconfig/docusaurus)             |
 | [Ember](#ember-tsconfigjson)                                         | [`@tsconfig/ember`](https://npmjs.com/package/@tsconfig/ember)                       |
 | [Next.js](#nextjs-tsconfigjson)                                      | [`@tsconfig/next`](https://npmjs.com/package/@tsconfig/next)                         |
-| [Node LTS](#node-lts-22-tsconfigjson)                                | [`@tsconfig/node-lts`](https://npmjs.com/package/@tsconfig/node-lts)                 |
+| [Node LTS](#node-lts-26-tsconfigjson)                                | [`@tsconfig/node-lts`](https://npmjs.com/package/@tsconfig/node-lts)                 |
 | [Node 10](#node-10-tsconfigjson)                                     | [`@tsconfig/node10`](https://npmjs.com/package/@tsconfig/node10)                     |
 | [Node 12](#node-12-tsconfigjson)                                     | [`@tsconfig/node12`](https://npmjs.com/package/@tsconfig/node12)                     |
 | [Node 14](#node-14-tsconfigjson)                                     | [`@tsconfig/node14`](https://npmjs.com/package/@tsconfig/node14)                     |
@@ -174,7 +174,7 @@ Add to your `tsconfig.json`:
 "extends": "@tsconfig/next/tsconfig.json"
 ```
 
-### Node LTS (24) <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
+### Node LTS (26) <kbd><a href="./bases/node-lts.json">tsconfig.json</a></kbd>
 
 Install:
 
