@@ -2,6 +2,7 @@ import * as path from "https://deno.land/std@0.164.0/path/mod.ts";
 
 // Loop through generated packages, deploying versions for anything which has a different tsconfig
 const uploaded = []
+const force = Deno.args.includes("--force");
 
 for (const dirEntry of Deno.readDirSync("packages")) {
   if (dirEntry.name === 'bases') continue // @tsconfig/bases package is special, it doesn't have a single tsconfig entry, it will be deployed separately
@@ -9,15 +10,17 @@ for (const dirEntry of Deno.readDirSync("packages")) {
   const localTsconfigPath = path.join("packages", dirEntry.name, "tsconfig.json");
   const newTSConfig = Deno.readTextFileSync(localTsconfigPath);
 
-  let upload = false;
-  try {
-    const unpkgURL = `https://unpkg.com/@tsconfig/${dirEntry.name}/tsconfig.json`;
-    const currentJSONReq = await fetch(unpkgURL);
-    const currentJSONTxt = await currentJSONReq.text();
-    upload = currentJSONTxt !== newTSConfig;
-  } catch (error) {
-    // Not here, definitely needs to be uploaded
-    upload = true;
+  let upload = force;
+  if (!upload) {
+    try {
+      const unpkgURL = `https://unpkg.com/@tsconfig/${dirEntry.name}/tsconfig.json`;
+      const currentJSONReq = await fetch(unpkgURL);
+      const currentJSONTxt = await currentJSONReq.text();
+      upload = currentJSONTxt !== newTSConfig;
+    } catch (error) {
+      // Not here, definitely needs to be uploaded
+      upload = true;
+    }
   }
 
   if (upload) {
