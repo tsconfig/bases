@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: 0 4 * * *
   workflow_dispatch:
+    inputs:
+      force:
+        description: Publish all packages even if unchanged
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -38,4 +43,4 @@ jobs:
 
       # Deploy anything which differs from the npm version of a tsconfig
       - name: "Deploy built packages to NPM"
-        run: deno run --allow-read --allow-run --allow-net scripts/deploy-changed-npm-packages.ts
+        run: deno run --allow-read --allow-run --allow-net scripts/deploy-changed-npm-packages.ts ${{ inputs.force && '--force' || '' }}
